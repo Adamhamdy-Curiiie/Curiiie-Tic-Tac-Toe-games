@@ -1,3 +1,8 @@
+/**
+* @file Memory_Classes.h
+ * @brief Memory Tic-Tac-Toe where moves are hidden
+ */
+
 #ifndef MEMORY_CLASSES_H
 #define MEMORY_CLASSES_H
 
