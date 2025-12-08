@@ -1,24 +1,22 @@
-#ifndef MEMORY_CLASSES_H
+﻿#ifndef MEMORY_CLASSES_H
 #define MEMORY_CLASSES_H
 
 #include "BoardGame_Classes.h"
 #include <iostream>
 #include <iomanip>
 #include <cctype>
-#include <vector>
 using namespace std;
 
 /**
  * @class Memory_Board
  * @brief Represents the Memory Tic-Tac-Toe board (3x3) with hidden cells.
  *
- * During the game, all cells show as '#'.
- * At the end, reveals all moves that were made.
+ * Inherits from Board<char> and handles moves, win/draw checks,
+ * and hidden board display for memory-based gameplay.
  */
 class Memory_Board : public Board<char> {
 private:
-    char blank_symbol = ' '; /**< Character for empty cell */
-    vector<tuple<int, int, char>> move_history; /**< Stores all moves: (x, y, symbol) */
+    char blank_symbol = '.'; /**< Character for empty cell */
 
 public:
     /**
@@ -32,16 +30,6 @@ public:
      * @return True if move is valid and applied, false otherwise
      */
     bool update_board(Move<char>* move) override;
-
-    /**
-     * @brief Display board with all cells as '#' (hidden)
-     */
-    void display_hidden_board();
-
-    /**
-     * @brief Display actual board with all moves revealed
-     */
-    void display_actual_board();
 
     /**
      * @brief Check if a player has won
@@ -69,29 +57,48 @@ public:
      * @return True if game is over
      */
     bool game_is_over(Player<char>* player) override;
+
+    /**
+     * @brief Get a hidden version of the board
+     * @param round_completed If true, show '#' for occupied cells
+     * @return 2D vector representing hidden board
+     */
+    vector<vector<char>> get_hidden_board(bool round_completed = false) const;
 };
 
 /**
  * @class Memory_UI
  * @brief User Interface for the Memory Tic-Tac-Toe game.
+ *
+ * Handles player creation, move input, and board display.
  */
 class Memory_UI : public UI<char> {
-    private:
-    char substitute = '#';
 public:
+    /**
+     * @brief Constructor with welcome message
+     */
     Memory_UI();
+
+    /**
+     * @brief Destructor
+     */
     ~Memory_UI() {};
-    void display_board_matrix(const vector<vector<char>> &matrix) const override;
+
+    /**
+     * @brief Create a player with name, symbol, and type
+     * @param name Player name
+     * @param symbol Player symbol ('X' or 'O')
+     * @param type Player type (HUMAN or COMPUTER)
+     * @return Pointer to created Player object
+     */
     Player<char>* create_player(string& name, char symbol, PlayerType type) override;
+
+    /**
+     * @brief Get the next move from a player
+     * @param player Pointer to the player
+     * @return Pointer to new Move object
+     */
     Move<char>* get_move(Player<char>* player) override;
 };
-
-/**
- * @brief Custom game loop for Memory Tic-Tac-Toe
- * @param board The Memory board
- * @param players Array of 2 players
- * @param ui The Memory UI
- */
-void run_memory_game(Memory_Board* board, Player<char>** players, Memory_UI* ui);
 
 #endif // MEMORY_CLASSES_H
