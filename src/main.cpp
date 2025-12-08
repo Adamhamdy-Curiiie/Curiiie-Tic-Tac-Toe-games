@@ -72,7 +72,8 @@ void switch_case() {
             cout << "\nGame 4 not implemented yet.\n";
             break;
         case 5:
-
+            ui = new Misere_UI();
+            board = new Misere_Board();
 
             break;
         case 6:
@@ -84,7 +85,8 @@ void switch_case() {
             board = new Game7_Board();
             break;
         case 8:
-
+            ui = new Pyramid_UI();
+            board = new Pyramid_Board();
             break;
         case 10:
             ui = new Game10_UI();
