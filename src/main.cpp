@@ -5,6 +5,9 @@
 #include  "InfinityTicTacToe.h"
 #include "Game10.h"
 #include  "Memory_Classes.h"
+#include "Game_3.h"            
+#include "WordTicTacToe.h"       
+#include "UltimateTicTacToe.h"  
 
 #include <iostream>
 
@@ -66,11 +69,13 @@ void switch_case() {
             cout << "\nGame 2 not implemented yet.\n";
             break;
         case 3:
-                cout << "\nGame 3 not implemented yet.\n";
-            break;
+                ui = new FiveByFiveUI();
+                board = new FiveByFiveBoard();
+                break;
         case 4:
-            cout << "\nGame 4 not implemented yet.\n";
-            break;
+                ui = new WordTicTacToe_UI();
+                board = new WordTicTacToe_Board();
+                break;
         case 5:
             ui = new Misere_UI();
             board = new Misere_Board();
@@ -97,8 +102,9 @@ void switch_case() {
             board = new InfinityBoard();
             break;
         case 12:
-            cout << "\nGame 12 not implemented yet.\n";
-            break;
+                ui = new Ultimate_TTT_UI<char>();
+                board = new Ultimate_TTT_Board<char>();
+                break;
         case 13: {
             ui = new Memory_UI();
             board = new Memory_Board();
