@@ -3,6 +3,7 @@ cmake-build-release/
 build/
 out/
 
+
 .idea/
 *.user
 *.suo

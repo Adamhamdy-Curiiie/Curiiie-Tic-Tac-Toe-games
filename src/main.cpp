@@ -18,6 +18,7 @@
 #include "Misere_Classes.h"
 #include "Pyramid_Classes.h"
 #include "SUS_Game.h"
+#include "Connect_4.h"
 
 #include <iostream>
 
@@ -87,7 +88,8 @@ void switch_case() {
             board = new SUS_Board();
             break;
         case 2:
-            cout << "\nGame 2 not implemented yet.\n";
+            ui = new Connect_4_UI();
+            board = new Connect_4();
             break;
         case 3:
             ui = new FiveByFiveUI();
