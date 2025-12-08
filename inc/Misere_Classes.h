@@ -3,10 +3,10 @@
 
 /**
  * @file Misere_Classes.h
- * @brief Misère Tic-Tac-Toe (3-in-a-row loses) specific classes.
+ * @brief Misï¿½re Tic-Tac-Toe (3-in-a-row loses) specific classes.
  *
  * This file contains the class definitions for:
- * - Misere_TTT_Board: handles the board logic for Misère Tic-Tac-Toe
+ * - Misere_TTT_Board: handles the board logic for Misï¿½re Tic-Tac-Toe
  * - Misere_UI: handles user interface, player creation, and moves
  */
 
@@ -16,9 +16,9 @@ using namespace std;
 
 /**
  * @class Misere_TTT_Board
- * @brief Represents a 3x3 Misère Tic-Tac-Toe board.
+ * @brief Represents a 3x3 Misï¿½re Tic-Tac-Toe board.
  *
- * In Misère Tic-Tac-Toe, making 3-in-a-row means the player loses.
+ * In Misï¿½re Tic-Tac-Toe, making 3-in-a-row means the player loses.
  */
 class Misere_TTT_Board : public Board<char> {
 private:
@@ -80,7 +80,7 @@ public:
 
 /**
  * @class Misere_UI
- * @brief Handles the user interface for Misère Tic-Tac-Toe.
+ * @brief Handles the user interface for Misï¿½re Tic-Tac-Toe.
  *
  * Responsible for setting up players, getting moves from humans or AI,
  * and displaying prompts.
@@ -88,7 +88,7 @@ public:
 class Misere_UI : public UI<char> {
 public:
     /**
-     * @brief Constructor for Misère Tic-Tac-Toe UI.
+     * @brief Constructor for Misï¿½re Tic-Tac-Toe UI.
      */
     Misere_UI();
 

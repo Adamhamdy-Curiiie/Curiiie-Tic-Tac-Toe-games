@@ -25,31 +25,6 @@ bool Memory_Board::update_board(Move<char>* move) {
     return false;
 }
 
-void Memory_UI::display_board_matrix(const vector<vector<char> > &matrix) const {
-    if (matrix.empty() || matrix[0].empty()) return;
-
-    int rows = matrix.size();
-    int cols = matrix[0].size();
-
-    cout << "\n  ";
-    for (int j = 0; j < cols; ++j)
-        cout << setw(cell_width + 1) << j << "  ";
-    cout << "\n  " << string((cell_width + 3) * cols, '-') << "-\n";
-
-    for (int i = 0; i < rows; ++i)
-    {
-        cout << setw(2) << i << "|  ";
-        for (int j = 0; j < cols; ++j)
-        {
-            cout << (matrix[i][j] == ' ' ? matrix[i][j] : substitute) << "  |  ";
-        }
-        cout << "\n  " << string((cell_width + 3) * cols, '-') << "-\n";
-    }
-    cout << endl;
-}
-
-
-
 bool Memory_Board::is_win(Player<char>* player) {
     char sym = player->get_symbol();
     auto all_equal = [&](char a, char b, char c) {
@@ -78,6 +53,7 @@ bool Memory_Board::game_is_over(Player<char>* player) {
 
 // ---------------- Memory_UI ----------------
 
+
 Memory_UI::Memory_UI() : UI<char>("Welcome to Memory Tic-Tac-Toe ", 3) {
     cout << "\n          MEMORY TIC-TAC-TOE GAME            \n";
     cout << "\nRules:\n";
@@ -85,6 +61,29 @@ Memory_UI::Memory_UI() : UI<char>("Welcome to Memory Tic-Tac-Toe ", 3) {
     cout << "- You must remember where you and your opponent placed symbols\n";
     cout << "- At the end, all moves will be revealed\n";
     cout << "- Win by getting 3 in a row!\n\n";
+}
+
+void Memory_UI::display_board_matrix(const vector<vector<char> > &matrix) const {
+    if (matrix.empty() || matrix[0].empty()) return;
+
+    int rows = matrix.size();
+    int cols = matrix[0].size();
+
+    cout << "\n  ";
+    for (int j = 0; j < cols; ++j)
+        cout << setw(cell_width + 1) << j << "  ";
+    cout << "\n  " << string((cell_width + 3) * cols, '-') << "-\n";
+
+    for (int i = 0; i < rows; ++i)
+    {
+        cout << setw(2) << i << "|  ";
+        for (int j = 0; j < cols; ++j)
+        {
+            cout << (matrix[i][j] == ' ' ? matrix[i][j] : substitute) << "  |  ";
+        }
+        cout << "\n  " << string((cell_width + 3) * cols, '-') << "-\n";
+    }
+    cout << endl;
 }
 
 Player<char>* Memory_UI::create_player(string& name, char symbol, PlayerType type) {

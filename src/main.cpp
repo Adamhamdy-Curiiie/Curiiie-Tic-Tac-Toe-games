@@ -1,17 +1,31 @@
+/**
+ * @file main.cpp
+ * @brief Main menu for Board Games Collection
+ * @author AdamHamdy-Muhammed Amr - Seif Eid - Ahmed Emam
+ * @date December 2025
+ */
+
 #include "BoardGame_Classes.h"
 #include "DiamondTicTacToe.h"
 #include "NumericalTicTacToe.h"
-#include  "Game7.h"
-#include  "InfinityTicTacToe.h"
+#include "Game7.h"
+#include "InfinityTicTacToe.h"
 #include "Game10.h"
-#include  "Memory_Classes.h"
+#include "Memory_Classes.h"
 #include "Game_3.h"            
 #include "WordTicTacToe.h"       
-#include "UltimateTicTacToe.h"  
+#include "UltimateTicTacToe.h"
+#include "Misere_Classes.h"
+#include "Pyramid_Classes.h"
+#include "SUS_Game.h"
 
 #include <iostream>
 
 using namespace std;
+
+/**
+ * @brief Display the game menu
+ */
 void display_menu() {
     cout << "\n===== BOARD GAMES MENU =====\n";
     cout << "1.  SUS \n";
@@ -32,8 +46,12 @@ void display_menu() {
     cout << "Enter your choice: ";
 }
 
+/**
+ * @brief Main game loop - handles menu selection and game execution
+ */
 void switch_case() {
     int choice;
+    
     while (true) {
         display_menu();
         cin >> choice;
@@ -43,6 +61,7 @@ void switch_case() {
             break;
         }
 
+        // Special case: Numerical game uses Board<int>
         if (choice == 9) {
             auto board = new NumericalBoard();
             auto ui = new NumericalUI();
@@ -58,28 +77,29 @@ void switch_case() {
             delete ui;
             continue;
         }
+        
         UI<char>* ui = nullptr;
         Board<char>* board = nullptr;
 
         switch (choice) {
         case 1:
-             cout << "\nGame 1 not implemented yet.\n";
+            ui = new SUS_UI();
+            board = new SUS_Board();
             break;
         case 2:
             cout << "\nGame 2 not implemented yet.\n";
             break;
         case 3:
-                ui = new FiveByFiveUI();
-                board = new FiveByFiveBoard();
-                break;
+            ui = new FiveByFiveUI();
+            board = new FiveByFiveBoard();
+            break;
         case 4:
-                ui = new WordTicTacToe_UI();
-                board = new WordTicTacToe_Board();
-                break;
+            ui = new WordTicTacToe_UI();
+            board = new WordTicTacToe_Board();
+            break;
         case 5:
             ui = new Misere_UI();
-            board = new Misere_Board();
-
+            board = new Misere_TTT_Board();
             break;
         case 6:
             ui = new DiamondUI();
@@ -102,14 +122,13 @@ void switch_case() {
             board = new InfinityBoard();
             break;
         case 12:
-                ui = new Ultimate_TTT_UI<char>();
-                board = new Ultimate_TTT_Board<char>();
-                break;
-        case 13: {
+            ui = new Ultimate_TTT_UI<char>();
+            board = new Ultimate_TTT_Board<char>();
+            break;
+        case 13:
             ui = new Memory_UI();
             board = new Memory_Board();
             break;
-       }
         default:
             cout << "\nInvalid choice! Try again.\n";
             continue;
@@ -129,6 +148,10 @@ void switch_case() {
     }
 }
 
+/**
+ * @brief Program entry point
+ * @return 0 on successful exit
+ */
 int main() {
     switch_case();
     return 0;

@@ -2,7 +2,6 @@
 * @file Memory_Classes.h
  * @brief Memory Tic-Tac-Toe where moves are hidden
  */
-
 #ifndef MEMORY_CLASSES_H
 #define MEMORY_CLASSES_H
 
@@ -37,16 +36,6 @@ public:
      * @return True if move is valid and applied, false otherwise
      */
     bool update_board(Move<char>* move) override;
-
-    /**
-     * @brief Display board with all cells as '#' (hidden)
-     */
-    void display_hidden_board();
-
-    /**
-     * @brief Display actual board with all moves revealed
-     */
-    void display_actual_board();
 
     /**
      * @brief Check if a player has won
@@ -86,17 +75,12 @@ class Memory_UI : public UI<char> {
 public:
     Memory_UI();
     ~Memory_UI() {};
+    /**
+     * @brief Display board with hidden moves each round
+     */
     void display_board_matrix(const vector<vector<char>> &matrix) const override;
     Player<char>* create_player(string& name, char symbol, PlayerType type) override;
     Move<char>* get_move(Player<char>* player) override;
 };
-
-/**
- * @brief Custom game loop for Memory Tic-Tac-Toe
- * @param board The Memory board
- * @param players Array of 2 players
- * @param ui The Memory UI
- */
-void run_memory_game(Memory_Board* board, Player<char>** players, Memory_UI* ui);
 
 #endif // MEMORY_CLASSES_H
