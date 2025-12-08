@@ -5,6 +5,7 @@ var hierarchy =
       [ "WordTicTacToe_Board", "class_word_tic_tac_toe___board.html", null ]
     ] ],
     [ "Board&lt; char &gt;", "class_board.html", [
+      [ "Connect_4", "class_connect__4.html", null ],
       [ "DiamondBoard", "class_diamond_board.html", null ],
       [ "FiveByFiveBoard", "class_five_by_five_board.html", null ],
       [ "FiveByFiveBoard", "class_five_by_five_board.html", null ],
@@ -66,6 +67,7 @@ var hierarchy =
       [ "WordTicTacToe_UI", "class_word_tic_tac_toe___u_i.html", null ]
     ] ],
     [ "UI&lt; char &gt;", "class_u_i.html", [
+      [ "Connect_4_UI", "class_connect__4___u_i.html", null ],
       [ "DiamondUI", "class_diamond_u_i.html", null ],
       [ "FiveByFiveUI", "class_five_by_five_u_i.html", null ],
       [ "FiveByFiveUI", "class_five_by_five_u_i.html", null ],

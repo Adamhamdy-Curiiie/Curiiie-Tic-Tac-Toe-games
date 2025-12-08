@@ -50,7 +50,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_board_game___classes_8h.html",
-"class_move.html#a96469802a55c9083a1e93c7edec8a00c"
+"class_misere___t_t_t___board.html#a0ea7c31dbe7872543bd3be68a1eac78c",
+"main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

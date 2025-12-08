@@ -78,6 +78,7 @@ void switch_case() {
             delete ui;
             continue;
         }
+
         
         UI<char>* ui = nullptr;
         Board<char>* board = nullptr;

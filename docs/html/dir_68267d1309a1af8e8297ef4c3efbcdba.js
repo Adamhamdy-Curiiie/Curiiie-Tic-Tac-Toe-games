@@ -1,5 +1,6 @@
 var dir_68267d1309a1af8e8297ef4c3efbcdba =
 [
+    [ "Connect_4.cpp", "_connect__4_8cpp.html", null ],
     [ "DiamondTicTacToe.cpp", "_diamond_tic_tac_toe_8cpp.html", null ],
     [ "Game10.cpp", "_game10_8cpp.html", null ],
     [ "Game7.cpp", "_game7_8cpp.html", null ],

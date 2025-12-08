@@ -1,0 +1,260 @@
+\doxysection{Connect\+\_\+4 Class Reference}
+\hypertarget{class_connect__4}{}\label{class_connect__4}\index{Connect\_4@{Connect\_4}}
+
+
+Represents the Connect 4 game board.  
+
+
+
+
+{\ttfamily \#include $<$Connect\+\_\+4.\+h$>$}
+
+Inheritance diagram for Connect\+\_\+4\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_connect__4}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_connect__4_a3999b9eb5ca4dfc230be1e3e34f19618}{Connect\+\_\+4}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes a 6x7 Connect 4 board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_connect__4_ab44b939b7ed20f299814ab644e49e19e}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_connect__4_aa95a21fdbcd19788ec3dc494cbcc73fa}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the given player has won the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_connect__4_af1001bf728801ccabd3f8f78e9f38e92}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}) override
+\begin{DoxyCompactList}\small\item\em Checks if the given player has lost the game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_connect__4_a6a1219da505d0b3759c2b8a385ebdbc9}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended in a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_connect__4_a2e1aa348970b5c16147560d214e85b44}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Determines if the game is over (win or draw). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_connect__4_a02e031a0ba1a9f2c226f9cdd6cefb733}{a}} = 0
+\begin{DoxyCompactList}\small\item\em Row position of the last placed token. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_connect__4_a7a1a6430a45b7910edce85062458b73a}{b}} = 0
+\begin{DoxyCompactList}\small\item\em Column position of the last placed token. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_connect__4_ac4bdebeec0955999a27c42340861b744}{blank\+\_\+symbol}} = \textquotesingle{}.\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Character used to represent an empty cell on the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the Connect 4 game board. 
+
+This class inherits from the generic {\ttfamily \doxylink{class_board}{Board}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class and implements the specific logic required for the Connect 4 game, including move updates, win/draw detection using four-\/in-\/a-\/row checking.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_board}{Board} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_connect__4_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_connect__4_a3999b9eb5ca4dfc230be1e3e34f19618}\index{Connect\_4@{Connect\_4}!Connect\_4@{Connect\_4}}
+\index{Connect\_4@{Connect\_4}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{Connect\_4()}{Connect\_4()}}
+{\footnotesize\ttfamily \label{class_connect__4_a3999b9eb5ca4dfc230be1e3e34f19618} 
+Connect\+\_\+4\+::\+Connect\+\_\+4 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor that initializes a 6x7 Connect 4 board. 
+
+All cells are initialized with the blank symbol. 
+
+\label{doc-func-members}
+\Hypertarget{class_connect__4_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_connect__4_a2e1aa348970b5c16147560d214e85b44}\index{Connect\_4@{Connect\_4}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_connect__4_a2e1aa348970b5c16147560d214e85b44} 
+bool Connect\+\_\+4\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determines if the game is over (win or draw). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player to evaluate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the game has ended, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_connect__4_a6a1219da505d0b3759c2b8a385ebdbc9}\index{Connect\_4@{Connect\_4}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_connect__4_a6a1219da505d0b3759c2b8a385ebdbc9} 
+bool Connect\+\_\+4\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended in a draw. 
+
+A draw occurs when all 42 cells are filled and no player has won.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the board is full and no player has won, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_connect__4_af1001bf728801ccabd3f8f78e9f38e92}\index{Connect\_4@{Connect\_4}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_connect__4_af1001bf728801ccabd3f8f78e9f38e92} 
+bool Connect\+\_\+4\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has lost the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (not used in Connect 4 logic). 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_connect__4_aa95a21fdbcd19788ec3dc494cbcc73fa}\index{Connect\_4@{Connect\_4}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_connect__4_aa95a21fdbcd19788ec3dc494cbcc73fa} 
+bool Connect\+\_\+4\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the given player has won the game. 
+
+Checks for four consecutive symbols horizontally, vertically, or diagonally.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player being checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the player has four in a row, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_connect__4_ab44b939b7ed20f299814ab644e49e19e}\index{Connect\_4@{Connect\_4}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_connect__4_ab44b939b7ed20f299814ab644e49e19e} 
+bool Connect\+\_\+4\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+The token drops to the lowest available position in the selected column.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to a \doxylink{class_move}{Move$<$char$>$} object containing column index and symbol. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the move is valid and successfully applied, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_connect__4_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_connect__4_a02e031a0ba1a9f2c226f9cdd6cefb733}\index{Connect\_4@{Connect\_4}!a@{a}}
+\index{a@{a}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \label{class_connect__4_a02e031a0ba1a9f2c226f9cdd6cefb733} 
+int Connect\+\_\+4\+::a = 0}
+
+
+
+Row position of the last placed token. 
+
+\Hypertarget{class_connect__4_a7a1a6430a45b7910edce85062458b73a}\index{Connect\_4@{Connect\_4}!b@{b}}
+\index{b@{b}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \label{class_connect__4_a7a1a6430a45b7910edce85062458b73a} 
+int Connect\+\_\+4\+::b = 0}
+
+
+
+Column position of the last placed token. 
+
+\Hypertarget{class_connect__4_ac4bdebeec0955999a27c42340861b744}\index{Connect\_4@{Connect\_4}!blank\_symbol@{blank\_symbol}}
+\index{blank\_symbol@{blank\_symbol}!Connect\_4@{Connect\_4}}
+\doxysubsubsection{\texorpdfstring{blank\_symbol}{blank\_symbol}}
+{\footnotesize\ttfamily \label{class_connect__4_ac4bdebeec0955999a27c42340861b744} 
+char Connect\+\_\+4\+::blank\+\_\+symbol = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Character used to represent an empty cell on the board. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_connect__4_8h}{Connect\+\_\+4.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_connect__4_8cpp}{Connect\+\_\+4.\+cpp}}\end{DoxyCompactItemize}

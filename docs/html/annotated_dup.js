@@ -3,6 +3,8 @@ var annotated_dup =
     [ "Board", "class_board.html", "class_board" ],
     [ "BoardUpdateException", "class_board_update_exception.html", "class_board_update_exception" ],
     [ "CellOccupiedException", "class_cell_occupied_exception.html", "class_cell_occupied_exception" ],
+    [ "Connect_4", "class_connect__4.html", "class_connect__4" ],
+    [ "Connect_4_UI", "class_connect__4___u_i.html", "class_connect__4___u_i" ],
     [ "DiamondBoard", "class_diamond_board.html", "class_diamond_board" ],
     [ "DiamondPlayer", "class_diamond_player.html", "class_diamond_player" ],
     [ "DiamondUI", "class_diamond_u_i.html", "class_diamond_u_i" ],

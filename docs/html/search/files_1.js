@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['diamondtictactoe_2ecpp_0',['DiamondTicTacToe.cpp',['../_diamond_tic_tac_toe_8cpp.html',1,'']]],
-  ['diamondtictactoe_2eh_1',['DiamondTicTacToe.h',['../_diamond_tic_tac_toe_8h.html',1,'']]]
+  ['connect_5f4_2ecpp_0',['Connect_4.cpp',['../_connect__4_8cpp.html',1,'']]],
+  ['connect_5f4_2eh_1',['Connect_4.h',['../_connect__4_8h.html',1,'']]]
 ];

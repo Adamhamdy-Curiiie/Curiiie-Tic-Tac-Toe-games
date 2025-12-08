@@ -1,6 +1,7 @@
 var dir_bfccd401955b95cf8c75461437045ac0 =
 [
     [ "BoardGame_Classes.h", "_board_game___classes_8h.html", "_board_game___classes_8h" ],
+    [ "Connect_4.h", "_connect__4_8h.html", "_connect__4_8h" ],
     [ "DiamondTicTacToe.h", "_diamond_tic_tac_toe_8h.html", "_diamond_tic_tac_toe_8h" ],
     [ "Game10.h", "_game10_8h.html", "_game10_8h" ],
     [ "Game7.h", "_game7_8h.html", "_game7_8h" ],
