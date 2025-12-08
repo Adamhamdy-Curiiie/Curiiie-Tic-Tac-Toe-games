@@ -1,0 +1,551 @@
+\doxysection{Word\+Tic\+Tac\+Toe\+\_\+\+Board Class Reference}
+\hypertarget{class_word_tic_tac_toe___board}{}\label{class_word_tic_tac_toe___board}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+
+
+Game board for Word Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Word\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Word\+Tic\+Tac\+Toe\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_word_tic_tac_toe___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_word_tic_tac_toe___board_a28bc1b40e88a726564e86c052b42c318}{Word\+Tic\+Tac\+Toe\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Constructor -\/ Creates a 3x3 empty board. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_word_tic_tac_toe___board_a318b5380bf0804798d3c7e64cd5abfb4}{\texorpdfstring{$\sim$}{\string~}\+Word\+Tic\+Tac\+Toe\+\_\+\+Board}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_word_tic_tac_toe___board_aee856b67709f8e3db48ea59e90e97b87}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Updates the board with a player\textquotesingle{}s move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_word_tic_tac_toe___board_a3d8bb94142742b99a2420011b4369fab}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the current player has won. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_word_tic_tac_toe___board_a24fdbe2bc70bcbc9a42045c683c3c2ed}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the current player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_word_tic_tac_toe___board_a3e0ef585e102013d0c9ec43ab39ea87e}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the game is a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_word_tic_tac_toe___board_a38246d03269fe58b8e880f8da8cad47e}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if the game has ended. \end{DoxyCompactList}\item 
+const set$<$ string $>$ \& \mbox{\hyperlink{class_word_tic_tac_toe___board_af5b764ba4744d0a5e25906b3eae4e045}{get\+\_\+dictionary}} () const
+\begin{DoxyCompactList}\small\item\em Get reference to dictionary for AI use. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ T $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_word_tic_tac_toe___board_a08f0164f3892377685ac5db6377b8abb}{load\+\_\+dictionary}} ()
+\begin{DoxyCompactList}\small\item\em Loads the dictionary from dic.\+txt file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_word_tic_tac_toe___board_a0a4bc407e90f80192dc3325f546f7375}{is\+\_\+valid\+\_\+word}} (const string \&word)
+\begin{DoxyCompactList}\small\item\em Checks if a word exists in the dictionary. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_word_tic_tac_toe___board_a46659622d728de6851e8baab4f5e1416}{check\+\_\+all\+\_\+directions}} ()
+\begin{DoxyCompactList}\small\item\em Checks all possible directions for valid words. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+set$<$ string $>$ \mbox{\hyperlink{class_word_tic_tac_toe___board_af72c83ecc32143c885a874649c346d58}{dictionary}}
+\begin{DoxyCompactList}\small\item\em Set containing all valid words from dictionary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ T $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}} = 0
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game board for Word Tic-\/\+Tac-\/\+Toe. 
+
+Manages a 3x3 board where players place letters to form valid words. The board validates words against a dictionary loaded from file. $<$char$>$ 
+
+\label{doc-constructors}
+\Hypertarget{class_word_tic_tac_toe___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_word_tic_tac_toe___board_a28bc1b40e88a726564e86c052b42c318}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{WordTicTacToe\_Board()}{WordTicTacToe\_Board()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a28bc1b40e88a726564e86c052b42c318} 
+Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::\+Word\+Tic\+Tac\+Toe\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor -\/ Creates a 3x3 empty board. 
+
+Constructs a new Word Tic-\/\+Tac-\/\+Toe board.
+
+Initializes board dimensions to 3x3, sets all cells to \textquotesingle{}.\textquotesingle{}, loads dictionary from file, and seeds random generator 
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & If dictionary loading fails\\
+\hline
+\end{DoxyExceptions}
+Initializes a 3x3 board with empty spaces (\textquotesingle{} \textquotesingle{}), loads dictionary from file, and prepares the game for play 
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & If dictionary file cannot be opened or is empty (via load\+\_\+dictionary) \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_word_tic_tac_toe___board_a08f0164f3892377685ac5db6377b8abb}{load\+\_\+dictionary()} 
+\end{DoxySeeAlso}
+\Hypertarget{class_word_tic_tac_toe___board_a318b5380bf0804798d3c7e64cd5abfb4}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!````~WordTicTacToe\_Board@{\texorpdfstring{$\sim$}{\string~}WordTicTacToe\_Board}}
+\index{````~WordTicTacToe\_Board@{\texorpdfstring{$\sim$}{\string~}WordTicTacToe\_Board}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}WordTicTacToe\_Board()}{\string~WordTicTacToe\_Board()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a318b5380bf0804798d3c7e64cd5abfb4} 
+virtual Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::\texorpdfstring{$\sim$}{\string~}\+Word\+Tic\+Tac\+Toe\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor. 
+
+Uses default destructor (no dynamic resources to clean) 
+
+\label{doc-func-members}
+\Hypertarget{class_word_tic_tac_toe___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_word_tic_tac_toe___board_a46659622d728de6851e8baab4f5e1416}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!check\_all\_directions@{check\_all\_directions}}
+\index{check\_all\_directions@{check\_all\_directions}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{check\_all\_directions()}{check\_all\_directions()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a46659622d728de6851e8baab4f5e1416} 
+bool Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::check\+\_\+all\+\_\+directions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks all possible directions for valid words. 
+
+Scans all possible directions for valid 3-\/letter words.
+
+Scans horizontally, vertically, and diagonally (both directions) for 3-\/letter sequences that form valid words \begin{DoxyReturn}{Returns}
+true if any valid word is found in any direction, false otherwise
+
+true if any valid word found in any direction, false otherwise
+\end{DoxyReturn}
+Checks the following directions\+:
+\begin{DoxyEnumerate}
+\item All rows (horizontal) -\/ left to right
+\item All columns (vertical) -\/ top to bottom
+\item Main diagonal () -\/ top-\/left to bottom-\/right
+\item Anti-\/diagonal (/) -\/ top-\/right to bottom-\/left
+\end{DoxyEnumerate}
+
+For each direction, extracts 3-\/letter sequence and validates against dictionary
+
+\begin{DoxyNote}{Note}
+Only checks complete words (no spaces allowed in sequence) 
+
+Prints found word location to console for debugging 
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+Dictionary must be loaded and board must be initialized
+\end{DoxyPrecond}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_word_tic_tac_toe___board_a0a4bc407e90f80192dc3325f546f7375}{is\+\_\+valid\+\_\+word()}
+\end{DoxySeeAlso}
+\begin{DoxyParagraph}{Example Board\+:}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Board\ contains:}}
+\DoxyCodeLine{\textcolor{comment}{//\ C\ A\ T}}
+\DoxyCodeLine{\textcolor{comment}{//\ D\ O\ G}}
+\DoxyCodeLine{\textcolor{comment}{//\ X\ Y\ Z}}
+\DoxyCodeLine{\textcolor{comment}{//\ Will\ find\ "{}CAT"{}\ in\ row\ 0\ and\ "{}DOG"{}\ in\ row\ 1}}
+
+\end{DoxyCode}
+ 
+\end{DoxyParagraph}
+\Hypertarget{class_word_tic_tac_toe___board_a38246d03269fe58b8e880f8da8cad47e}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a38246d03269fe58b8e880f8da8cad47e} 
+bool Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game has ended. 
+
+Checks if the game has ended (win or draw).
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if game is won or drawn, false if game continues
+\end{DoxyReturn}
+Combines win and draw checks to determine game state
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if game is won or drawn, false if game continues
+\end{DoxyReturn}
+Combines win and draw checks to determine overall game state \begin{DoxyNote}{Note}
+Game cannot end in a loss (no lose condition exists) 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_word_tic_tac_toe___board_a3d8bb94142742b99a2420011b4369fab}{is\+\_\+win()}, \doxylink{class_word_tic_tac_toe___board_a3e0ef585e102013d0c9ec43ab39ea87e}{is\+\_\+draw()} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_word_tic_tac_toe___board_af5b764ba4744d0a5e25906b3eae4e045}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!get\_dictionary@{get\_dictionary}}
+\index{get\_dictionary@{get\_dictionary}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{get\_dictionary()}{get\_dictionary()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_af5b764ba4744d0a5e25906b3eae4e045} 
+const set$<$ string $>$ \& Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::get\+\_\+dictionary (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get reference to dictionary for AI use. 
+
+\begin{DoxyReturn}{Returns}
+const reference to the dictionary set 
+\end{DoxyReturn}
+\Hypertarget{class_word_tic_tac_toe___board_a3e0ef585e102013d0c9ec43ab39ea87e}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a3e0ef585e102013d0c9ec43ab39ea87e} 
+bool Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the game is a draw. 
+
+Determines if the game is a draw.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if board is full with no valid words formed, false otherwise
+\end{DoxyReturn}
+Draw condition\+: all 9 cells filled and no player has won
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if board is full (9 moves) and no valid word exists, false otherwise
+\end{DoxyReturn}
+Draw condition\+: all 9 cells are filled but no player has formed a valid word \begin{DoxyNote}{Note}
+Only checks for draw when n\+\_\+moves reaches 9 
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+\doxylink{class_board}{Board} must be in valid state with accurate n\+\_\+moves counter 
+\end{DoxyPrecond}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_word_tic_tac_toe___board_a24fdbe2bc70bcbc9a42045c683c3c2ed}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a24fdbe2bc70bcbc9a42045c683c3c2ed} 
+bool Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the current player has lost. 
+
+Determines if the current player has lost the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false (no explicit lose condition in this game) 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This game has no losing condition, only win or draw
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns false
+\end{DoxyReturn}
+This game has no explicit lose condition -\/ only win or draw \begin{DoxyNote}{Note}
+Required by base class interface but always returns false in this game variant 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_word_tic_tac_toe___board_a0a4bc407e90f80192dc3325f546f7375}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!is\_valid\_word@{is\_valid\_word}}
+\index{is\_valid\_word@{is\_valid\_word}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_word()}{is\_valid\_word()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a0a4bc407e90f80192dc3325f546f7375} 
+bool Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::is\+\_\+valid\+\_\+word (\begin{DoxyParamCaption}\item[{const string \&}]{word}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if a word exists in the dictionary. 
+
+Checks if a word exists in the loaded dictionary.
+
+
+\begin{DoxyParams}{Parameters}
+{\em word} & The word to validate (case-\/insensitive) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if word exists in dictionary, false otherwise 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Converts input to uppercase before checking
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em word} & The word to validate (any case accepted) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if word exists in dictionary, false otherwise
+\end{DoxyReturn}
+Converts input word to uppercase before searching in dictionary set \begin{DoxyNote}{Note}
+Case-\/insensitive comparison (CAT = cat = CaT) 
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+Dictionary must be loaded (load\+\_\+dictionary called)
+\end{DoxyPrecond}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_word_tic_tac_toe___board_a0a4bc407e90f80192dc3325f546f7375}{is\_valid\_word}}(\textcolor{stringliteral}{"{}cat"{}}))\ \{}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}CAT\ is\ valid!"{}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{class_word_tic_tac_toe___board_a3d8bb94142742b99a2420011b4369fab}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a3d8bb94142742b99a2420011b4369fab} 
+bool Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if the current player has won. 
+
+Determines if the current player has won the game.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player (unused in this implementation) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any valid 3-\/letter word exists on the board, false otherwise
+\end{DoxyReturn}
+Win condition\+: forming any valid dictionary word in any direction
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player (not used in this implementation) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a valid 3-\/letter word exists on the board, false otherwise
+\end{DoxyReturn}
+Win condition\+: any row, column, or diagonal forms a valid dictionary word \begin{DoxyNote}{Note}
+Parameter \textquotesingle{}player\textquotesingle{} is required by interface but not used in logic 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_word_tic_tac_toe___board_a46659622d728de6851e8baab4f5e1416}{check\+\_\+all\+\_\+directions()} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_word_tic_tac_toe___board_a08f0164f3892377685ac5db6377b8abb}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!load\_dictionary@{load\_dictionary}}
+\index{load\_dictionary@{load\_dictionary}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{load\_dictionary()}{load\_dictionary()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_a08f0164f3892377685ac5db6377b8abb} 
+void Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::load\+\_\+dictionary (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads the dictionary from dic.\+txt file. 
+
+Loads valid words from dictionary file into memory.
+
+Reads words from file, converts to uppercase, and stores in set. Each line in file should contain one word. 
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & If file cannot be opened \\
+\hline
+{\em runtime\+\_\+error} & If dictionary is empty after loading \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+Words are automatically converted to uppercase for case-\/insensitive matching
+\end{DoxyNote}
+Attempts to open dic.\+txt from multiple paths\+:
+\begin{DoxyEnumerate}
+\item Current directory (./dic.txt)
+\item Parent directory (../dic.txt)
+\item Explicit path (./dic.txt)
+\end{DoxyEnumerate}
+
+Reads words line by line, converts to uppercase, stores in set 
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & Exits program if file not found or dictionary is empty \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+All words are automatically converted to uppercase for case-\/insensitive matching 
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+dictionary set is populated with valid words 
+\end{DoxyPostcond}
+\begin{DoxyWarning}{Warning}
+Program terminates with exit(1) if dictionary loading fails 
+\end{DoxyWarning}
+\Hypertarget{class_word_tic_tac_toe___board_aee856b67709f8e3db48ea59e90e97b87}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_aee856b67709f8e3db48ea59e90e97b87} 
+bool Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the board with a player\textquotesingle{}s move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move} object containing position (x,y) and symbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move was valid and applied, false if position already occupied
+\end{DoxyReturn}
+Validates move coordinates and checks if cell is empty before placing symbol
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_move}{Move} object containing x, y coordinates and letter symbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move is valid and successfully applied, false otherwise 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em true} & \doxylink{class_move}{Move} was valid and board updated \\
+\hline
+{\em false} & \doxylink{class_move}{Move} was invalid (null pointer, out of bounds, cell occupied, invalid letter)\\
+\hline
+\end{DoxyRetVals}
+Performs comprehensive validation\+:
+\begin{DoxyItemize}
+\item Checks if move pointer is not null
+\item Validates coordinates are within 0-\/2 range
+\item Ensures target cell is empty (\textquotesingle{} \textquotesingle{})
+\item Validates letter is A-\/Z (converts to uppercase)
+\item Increments move counter on success
+\end{DoxyItemize}
+
+\begin{DoxyPrecond}{Precondition}
+\doxylink{class_board}{Board} must be initialized 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+If successful, board\mbox{[}x\mbox{]}\mbox{[}y\mbox{]} contains the letter and n\+\_\+moves is incremented 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Automatically converts letter to uppercase before validation
+\end{DoxyNote}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Move<char>*\ m\ =\ \textcolor{keyword}{new}\ Move<char>(1,\ 1,\ \textcolor{charliteral}{'A'});}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}-\/>update\_board(m))\ \{}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Move\ successful!"{}};}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_word_tic_tac_toe___board_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_word_tic_tac_toe___board_af72c83ecc32143c885a874649c346d58}\index{WordTicTacToe\_Board@{WordTicTacToe\_Board}!dictionary@{dictionary}}
+\index{dictionary@{dictionary}!WordTicTacToe\_Board@{WordTicTacToe\_Board}}
+\doxysubsubsection{\texorpdfstring{dictionary}{dictionary}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___board_af72c83ecc32143c885a874649c346d58} 
+set$<$string$>$ Word\+Tic\+Tac\+Toe\+\_\+\+Board\+::dictionary\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Set containing all valid words from dictionary. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_word_tic_tac_toe_8h}{Word\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_word_tic_tac_toe_8cpp}{Word\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

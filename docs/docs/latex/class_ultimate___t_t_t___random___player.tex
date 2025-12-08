@@ -1,0 +1,101 @@
+\doxysection{Ultimate\+\_\+\+TTT\+\_\+\+Random\+\_\+\+Player\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_ultimate___t_t_t___random___player}{}\label{class_ultimate___t_t_t___random___player}\index{Ultimate\_TTT\_Random\_Player$<$ T $>$@{Ultimate\_TTT\_Random\_Player$<$ T $>$}}
+
+
+Random computer player for Ultimate Tic Tac Toe.  
+
+
+
+
+{\ttfamily \#include $<$Ultimate\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Ultimate\+\_\+\+TTT\+\_\+\+Random\+\_\+\+Player\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ultimate___t_t_t___random___player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ultimate___t_t_t___random___player_a50303375452dc1a8ffcb7e24d78f8e93}{Ultimate\+\_\+\+TTT\+\_\+\+Random\+\_\+\+Player}} (T \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}})
+\begin{DoxyCompactList}\small\item\em Constructor for random player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, T s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Ultimate\+\_\+\+TTT\+\_\+\+Random\+\_\+\+Player$<$ T $>$}
+Random computer player for Ultimate Tic Tac Toe. 
+
+Makes random valid moves within the active sub-\/board or any available sub-\/board if no restriction
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of symbol used (typically char) \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-constructors}
+\Hypertarget{class_ultimate___t_t_t___random___player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ultimate___t_t_t___random___player_a50303375452dc1a8ffcb7e24d78f8e93}\index{Ultimate\_TTT\_Random\_Player$<$ T $>$@{Ultimate\_TTT\_Random\_Player$<$ T $>$}!Ultimate\_TTT\_Random\_Player@{Ultimate\_TTT\_Random\_Player}}
+\index{Ultimate\_TTT\_Random\_Player@{Ultimate\_TTT\_Random\_Player}!Ultimate\_TTT\_Random\_Player$<$ T $>$@{Ultimate\_TTT\_Random\_Player$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Ultimate\_TTT\_Random\_Player()}{Ultimate\_TTT\_Random\_Player()}}
+{\footnotesize\ttfamily \label{class_ultimate___t_t_t___random___player_a50303375452dc1a8ffcb7e24d78f8e93} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_ultimate___t_t_t___random___player}{Ultimate\+\_\+\+TTT\+\_\+\+Random\+\_\+\+Player}}$<$ T $>$\+::\+Ultimate\+\_\+\+TTT\+\_\+\+Random\+\_\+\+Player (\begin{DoxyParamCaption}\item[{T}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for random player. 
+
+Constructor for random computer player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & \doxylink{class_player}{Player} symbol (X or O)\\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} symbol (X or O)\\
+\hline
+\end{DoxyParams}
+Creates a computer player that makes random valid moves 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of symbol used (typically char) \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_ultimate_tic_tac_toe_8h}{Ultimate\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_ultimate_tic_tac_toe_8cpp}{Ultimate\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

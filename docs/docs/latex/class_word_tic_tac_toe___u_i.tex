@@ -1,0 +1,253 @@
+\doxysection{Word\+Tic\+Tac\+Toe\+\_\+\+UI Class Reference}
+\hypertarget{class_word_tic_tac_toe___u_i}{}\label{class_word_tic_tac_toe___u_i}\index{WordTicTacToe\_UI@{WordTicTacToe\_UI}}
+
+
+User interface for Word Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \#include $<$Word\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Word\+Tic\+Tac\+Toe\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_word_tic_tac_toe___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_word_tic_tac_toe___u_i_ab46ca28ffcf7aa8f895af427cc39b091}{Word\+Tic\+Tac\+Toe\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_u_i}{UI}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_word_tic_tac_toe___u_i_a52f5d989aaf3bb437ba3746e95526cc4}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Gets a move from the player via console input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_word_tic_tac_toe___u_i_aabab355ea0975e70adc70cc2c349bda3}{setup\+\_\+players}} () override
+\begin{DoxyCompactList}\small\item\em Sets up players for the game (OVERRIDE). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_ae50eed41905ca2f8dc103d9bef427fe6}{UI}} (string message, int cell\+\_\+display\+\_\+width)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, T symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ T $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User interface for Word Tic-\/\+Tac-\/\+Toe game. 
+
+Handles displaying the board and getting player input $<$char$>$ 
+
+\label{doc-constructors}
+\Hypertarget{class_word_tic_tac_toe___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_word_tic_tac_toe___u_i_ab46ca28ffcf7aa8f895af427cc39b091}\index{WordTicTacToe\_UI@{WordTicTacToe\_UI}!WordTicTacToe\_UI@{WordTicTacToe\_UI}}
+\index{WordTicTacToe\_UI@{WordTicTacToe\_UI}!WordTicTacToe\_UI@{WordTicTacToe\_UI}}
+\doxysubsubsection{\texorpdfstring{WordTicTacToe\_UI()}{WordTicTacToe\_UI()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___u_i_ab46ca28ffcf7aa8f895af427cc39b091} 
+Word\+Tic\+Tac\+Toe\+\_\+\+UI\+::\+Word\+Tic\+Tac\+Toe\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_u_i}{UI}. 
+
+Constructs the game user interface.
+
+Initializes the user interface component
+
+Initializes \doxylink{class_u_i}{UI} with game title and displays welcome message with instructions \begin{DoxyPostcond}{Postcondition}
+\doxylink{class_u_i}{UI} is ready to accept player input 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+Automatically prints game instructions to console 
+\end{DoxyNote}
+
+
+\label{doc-func-members}
+\Hypertarget{class_word_tic_tac_toe___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_word_tic_tac_toe___u_i_a52f5d989aaf3bb437ba3746e95526cc4}\index{WordTicTacToe\_UI@{WordTicTacToe\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!WordTicTacToe\_UI@{WordTicTacToe\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___u_i_a52f5d989aaf3bb437ba3746e95526cc4} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Word\+Tic\+Tac\+Toe\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets a move from the player via console input. 
+
+Gets a move from the current player (human or computer).
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player making the move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object containing x, y coordinates and symbol 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em nullptr} & If input fails or is invalid \\
+\hline
+\end{DoxyRetVals}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & If input fails repeatedly (excessive errors)\\
+\hline
+\end{DoxyExceptions}
+Prompts user for row (0-\/2), column (0-\/2), and letter (A-\/Z) \begin{DoxyNote}{Note}
+Validates input ranges and letter format before returning
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player making the move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object containing the player\textquotesingle{}s chosen position and letter 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em nullptr} & If player is null or error occurs \\
+\hline
+{\em Move\texorpdfstring{$\ast$}{*}} & Valid move for human players (from keyboard input) \\
+\hline
+{\em Move\texorpdfstring{$\ast$}{*}} & Valid random move for random computer players \\
+\hline
+{\em Move\texorpdfstring{$\ast$}{*}} & Valid smart move for smart AI players\\
+\hline
+\end{DoxyRetVals}
+Behavior differs based on player type\+:
+\begin{DoxyItemize}
+\item COMPUTER (Random)\+: Calls get\+\_\+random\+\_\+move() for random AI player
+\item AI (Smart)\+: Calls get\+\_\+smart\+\_\+move() for intelligent AI player
+\item HUMAN\+: Prompts for row, column, and letter via console
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Input is converted to uppercase automatically 
+
+Does not validate move (validation done in update\+\_\+board) 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Caller is responsible for deleting returned \doxylink{class_move}{Move} pointer
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_word_tic_tac_toe___random_player_a09c8080f23d02989e3d30e0b376d311a}{Word\+Tic\+Tac\+Toe\+\_\+\+Random\+Player\+::get\+\_\+random\+\_\+move()} 
+
+\doxylink{class_word_tic_tac_toe___smart_player_a362a9072a5e945a52a29557d613a8890}{Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player\+::get\+\_\+smart\+\_\+move()}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Move<char>*\ move\ =\ ui-\/>get\_move(player);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (move)\ \{}
+\DoxyCodeLine{\ \ \ \ board-\/>update\_board(move);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{delete}\ move;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+\Hypertarget{class_word_tic_tac_toe___u_i_aabab355ea0975e70adc70cc2c349bda3}\index{WordTicTacToe\_UI@{WordTicTacToe\_UI}!setup\_players@{setup\_players}}
+\index{setup\_players@{setup\_players}!WordTicTacToe\_UI@{WordTicTacToe\_UI}}
+\doxysubsubsection{\texorpdfstring{setup\_players()}{setup\_players()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___u_i_aabab355ea0975e70adc70cc2c349bda3} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Word\+Tic\+Tac\+Toe\+\_\+\+UI\+::setup\+\_\+players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets up players for the game (OVERRIDE). 
+
+Sets up two players for the game.
+
+\begin{DoxyReturn}{Returns}
+Array of two \doxylink{class_player}{Player} pointers
+\end{DoxyReturn}
+Creates appropriate player types (Human, Random, or Smart AI)
+
+\begin{DoxyReturn}{Returns}
+Array of two \doxylink{class_player}{Player} pointers (Human, Random, or Smart AI)
+\end{DoxyReturn}
+Creates appropriate player types based on user selection\+:
+\begin{DoxyItemize}
+\item Option 1\+: Human player (manual input)
+\item Option 2\+: Random Computer (random moves)
+\item Option 3\+: Smart AI (intelligent strategic moves)
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+This overrides the base class method to support 3 player types 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Caller is responsible for deleting returned player objects
+\end{DoxyWarning}
+\begin{DoxyPostcond}{Postcondition}
+Two valid player objects are created and returned in array
+\end{DoxyPostcond}
+\begin{DoxyParagraph}{Player Type Selection\+:}
+User is prompted to choose from\+:
+\begin{DoxyItemize}
+\item 1\+: Human \doxylink{class_player}{Player} -\/ requires manual input for each move
+\item 2\+: Random Computer -\/ makes random valid moves
+\item 3\+: Smart AI -\/ uses strategic algorithm to find best moves 
+\end{DoxyItemize}
+\end{DoxyParagraph}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{UI$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_word_tic_tac_toe_8h}{Word\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_word_tic_tac_toe_8cpp}{Word\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

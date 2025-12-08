@@ -1,0 +1,148 @@
+\doxysection{Connect\+\_\+4\+\_\+\+UI Class Reference}
+\hypertarget{class_connect__4___u_i}{}\label{class_connect__4___u_i}\index{Connect\_4\_UI@{Connect\_4\_UI}}
+
+
+User Interface class for the Connect 4 game.  
+
+
+
+
+{\ttfamily \#include $<$Connect\+\_\+4.\+h$>$}
+
+Inheritance diagram for Connect\+\_\+4\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_connect__4___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_connect__4___u_i_a7a7e22df1bab0de5a944182c2a0ab71e}{Connect\+\_\+4\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_connect__4___u_i}{Connect\+\_\+4\+\_\+\+UI} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_connect__4___u_i_a2e8607d00a7e7dd77f2d20d3a37cf919}{\texorpdfstring{$\sim$}{\string~}\+Connect\+\_\+4\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_connect__4___u_i}{Connect\+\_\+4\+\_\+\+UI}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_connect__4___u_i_af4188b26921149f36d92b358b3f0b734}{create\+\_\+player}} (string \&name, char symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Creates a player of the specified type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_connect__4___u_i_aeff4858030cff5cc1774016f92054f95}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Retrieves the next move from a player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, char symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface class for the Connect 4 game. 
+
+Inherits from the generic {\ttfamily \doxylink{class_u_i}{UI}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} base class and provides Connect 4 specific functionality for player setup and move input.
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_u_i}{UI} 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{class_connect__4___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_connect__4___u_i_a7a7e22df1bab0de5a944182c2a0ab71e}\index{Connect\_4\_UI@{Connect\_4\_UI}!Connect\_4\_UI@{Connect\_4\_UI}}
+\index{Connect\_4\_UI@{Connect\_4\_UI}!Connect\_4\_UI@{Connect\_4\_UI}}
+\doxysubsubsection{\texorpdfstring{Connect\_4\_UI()}{Connect\_4\_UI()}}
+{\footnotesize\ttfamily \label{class_connect__4___u_i_a7a7e22df1bab0de5a944182c2a0ab71e} 
+Connect\+\_\+4\+\_\+\+UI\+::\+Connect\+\_\+4\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_connect__4___u_i}{Connect\+\_\+4\+\_\+\+UI} object. 
+
+Initializes the base {\ttfamily \doxylink{class_u_i}{UI}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} class with a welcome message. \Hypertarget{class_connect__4___u_i_a2e8607d00a7e7dd77f2d20d3a37cf919}\index{Connect\_4\_UI@{Connect\_4\_UI}!````~Connect\_4\_UI@{\texorpdfstring{$\sim$}{\string~}Connect\_4\_UI}}
+\index{````~Connect\_4\_UI@{\texorpdfstring{$\sim$}{\string~}Connect\_4\_UI}!Connect\_4\_UI@{Connect\_4\_UI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Connect\_4\_UI()}{\string~Connect\_4\_UI()}}
+{\footnotesize\ttfamily \label{class_connect__4___u_i_a2e8607d00a7e7dd77f2d20d3a37cf919} 
+Connect\+\_\+4\+\_\+\+UI\+::\texorpdfstring{$\sim$}{\string~}\+Connect\+\_\+4\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for \doxylink{class_connect__4___u_i}{Connect\+\_\+4\+\_\+\+UI}. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_connect__4___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_connect__4___u_i_af4188b26921149f36d92b358b3f0b734}\index{Connect\_4\_UI@{Connect\_4\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Connect\_4\_UI@{Connect\_4\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_connect__4___u_i_af4188b26921149f36d92b358b3f0b734} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Connect\+\_\+4\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Creates a player of the specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the player. \\
+\hline
+{\em symbol} & Character symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) assigned to the player. \\
+\hline
+{\em type} & The type of the player (Human or Computer). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{class_player}{Player$<$char$>$} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_connect__4___u_i_aeff4858030cff5cc1774016f92054f95}\index{Connect\_4\_UI@{Connect\_4\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Connect\_4\_UI@{Connect\_4\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_connect__4___u_i_aeff4858030cff5cc1774016f92054f95} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Connect\+\_\+4\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the next move from a player. 
+
+For human players, prompts for column input. For computer players, generates a random valid column.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to the player whose move is being requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a new {\ttfamily \doxylink{class_move}{Move}\texorpdfstring{$<$}{<}char\texorpdfstring{$>$}{>}} object representing the player\textquotesingle{}s action. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_connect__4_8h}{Connect\+\_\+4.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_connect__4_8cpp}{Connect\+\_\+4.\+cpp}}\end{DoxyCompactItemize}

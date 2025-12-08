@@ -1,0 +1,181 @@
+\doxysection{Numerical\+Player Class Reference}
+\hypertarget{class_numerical_player}{}\label{class_numerical_player}\index{NumericalPlayer@{NumericalPlayer}}
+
+
+\doxylink{class_player}{Player} with odd or even number pool.  
+
+
+
+
+{\ttfamily \#include $<$Numerical\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Numerical\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_numerical_player_a6982943474b49ccc515b6f2bda8ca2e7}{Numerical\+Player}} (string n, int s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t, bool odd\+Player)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_numerical_player_a086dee2ea90dc969b37ce8f32b7d03e8}{get\+\_\+valid\+\_\+moves}} ()
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_numerical_player_ad1c63f6a49a796b268a1765695021f86}{get\+\_\+available\+\_\+numbers}} ()
+\begin{DoxyCompactList}\small\item\em Get unused numbers for this player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_numerical_player_ac64bd1c7fbaffca39a7d87b90c247367}{get\+\_\+random\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Get random move for computer player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_numerical_player_ad5424746136ea07a5bc7faeab553be66}{set\+\_\+chosen\+\_\+number}} (int num)
+\item 
+int \mbox{\hyperlink{class_numerical_player_aa6c22f1ae2cf1b9344ddc35279bf22a8}{get\+\_\+chosen\+\_\+number}} () const
+\item 
+bool \mbox{\hyperlink{class_numerical_player_ac1f4ae0d436d58b48a4afba695e99029}{is\+\_\+odd\+\_\+player}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, int s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ int $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_numerical_player_a3b488ac0d29bbc9c1a77156d35ce326d}{available\+\_\+numbers\+\_\+odd}}
+\item 
+vector$<$ int $>$ \mbox{\hyperlink{class_numerical_player_a912edce962a5b27e5f34a8d552435c97}{available\+\_\+numbers\+\_\+even}}
+\item 
+int \mbox{\hyperlink{class_numerical_player_afcb8a5d19fb802d5a9392c5c8d797e25}{chosen\+\_\+number}}
+\item 
+bool \mbox{\hyperlink{class_numerical_player_a6644265f7d25ddb515c29fdfabb25da8}{is\+Odd}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ int $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_player}{Player} with odd or even number pool. 
+
+\label{doc-constructors}
+\Hypertarget{class_numerical_player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_numerical_player_a6982943474b49ccc515b6f2bda8ca2e7}\index{NumericalPlayer@{NumericalPlayer}!NumericalPlayer@{NumericalPlayer}}
+\index{NumericalPlayer@{NumericalPlayer}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{NumericalPlayer()}{NumericalPlayer()}}
+{\footnotesize\ttfamily \label{class_numerical_player_a6982943474b49ccc515b6f2bda8ca2e7} 
+Numerical\+Player\+::\+Numerical\+Player (\begin{DoxyParamCaption}\item[{string}]{n}{, }\item[{int}]{s}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{t}{, }\item[{bool}]{odd\+Player}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em odd\+Player} & True for odd numbers (1,3,5,7,9), false for even (2,4,6,8) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_numerical_player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical_player_ad1c63f6a49a796b268a1765695021f86}\index{NumericalPlayer@{NumericalPlayer}!get\_available\_numbers@{get\_available\_numbers}}
+\index{get\_available\_numbers@{get\_available\_numbers}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_available\_numbers()}{get\_available\_numbers()}}
+{\footnotesize\ttfamily \label{class_numerical_player_ad1c63f6a49a796b268a1765695021f86} 
+vector$<$ int $>$ Numerical\+Player\+::get\+\_\+available\+\_\+numbers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get unused numbers for this player. 
+
+\Hypertarget{class_numerical_player_aa6c22f1ae2cf1b9344ddc35279bf22a8}\index{NumericalPlayer@{NumericalPlayer}!get\_chosen\_number@{get\_chosen\_number}}
+\index{get\_chosen\_number@{get\_chosen\_number}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_chosen\_number()}{get\_chosen\_number()}}
+{\footnotesize\ttfamily \label{class_numerical_player_aa6c22f1ae2cf1b9344ddc35279bf22a8} 
+int Numerical\+Player\+::get\+\_\+chosen\+\_\+number (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_numerical_player_ac64bd1c7fbaffca39a7d87b90c247367}\index{NumericalPlayer@{NumericalPlayer}!get\_random\_move@{get\_random\_move}}
+\index{get\_random\_move@{get\_random\_move}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_random\_move()}{get\_random\_move()}}
+{\footnotesize\ttfamily \label{class_numerical_player_ac64bd1c7fbaffca39a7d87b90c247367} 
+\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} Numerical\+Player\+::get\+\_\+random\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Get random move for computer player. 
+
+\Hypertarget{class_numerical_player_a086dee2ea90dc969b37ce8f32b7d03e8}\index{NumericalPlayer@{NumericalPlayer}!get\_valid\_moves@{get\_valid\_moves}}
+\index{get\_valid\_moves@{get\_valid\_moves}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_valid\_moves()}{get\_valid\_moves()}}
+{\footnotesize\ttfamily \label{class_numerical_player_a086dee2ea90dc969b37ce8f32b7d03e8} 
+vector$<$ \mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*} $>$ Numerical\+Player\+::get\+\_\+valid\+\_\+moves (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_numerical_player_ac1f4ae0d436d58b48a4afba695e99029}\index{NumericalPlayer@{NumericalPlayer}!is\_odd\_player@{is\_odd\_player}}
+\index{is\_odd\_player@{is\_odd\_player}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{is\_odd\_player()}{is\_odd\_player()}}
+{\footnotesize\ttfamily \label{class_numerical_player_ac1f4ae0d436d58b48a4afba695e99029} 
+bool Numerical\+Player\+::is\+\_\+odd\+\_\+player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_numerical_player_ad5424746136ea07a5bc7faeab553be66}\index{NumericalPlayer@{NumericalPlayer}!set\_chosen\_number@{set\_chosen\_number}}
+\index{set\_chosen\_number@{set\_chosen\_number}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{set\_chosen\_number()}{set\_chosen\_number()}}
+{\footnotesize\ttfamily \label{class_numerical_player_ad5424746136ea07a5bc7faeab553be66} 
+void Numerical\+Player\+::set\+\_\+chosen\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_numerical_player_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_numerical_player_a912edce962a5b27e5f34a8d552435c97}\index{NumericalPlayer@{NumericalPlayer}!available\_numbers\_even@{available\_numbers\_even}}
+\index{available\_numbers\_even@{available\_numbers\_even}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{available\_numbers\_even}{available\_numbers\_even}}
+{\footnotesize\ttfamily \label{class_numerical_player_a912edce962a5b27e5f34a8d552435c97} 
+vector$<$int$>$ Numerical\+Player\+::available\+\_\+numbers\+\_\+even\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_numerical_player_a3b488ac0d29bbc9c1a77156d35ce326d}\index{NumericalPlayer@{NumericalPlayer}!available\_numbers\_odd@{available\_numbers\_odd}}
+\index{available\_numbers\_odd@{available\_numbers\_odd}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{available\_numbers\_odd}{available\_numbers\_odd}}
+{\footnotesize\ttfamily \label{class_numerical_player_a3b488ac0d29bbc9c1a77156d35ce326d} 
+vector$<$int$>$ Numerical\+Player\+::available\+\_\+numbers\+\_\+odd\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_numerical_player_afcb8a5d19fb802d5a9392c5c8d797e25}\index{NumericalPlayer@{NumericalPlayer}!chosen\_number@{chosen\_number}}
+\index{chosen\_number@{chosen\_number}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{chosen\_number}{chosen\_number}}
+{\footnotesize\ttfamily \label{class_numerical_player_afcb8a5d19fb802d5a9392c5c8d797e25} 
+int Numerical\+Player\+::chosen\+\_\+number\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_numerical_player_a6644265f7d25ddb515c29fdfabb25da8}\index{NumericalPlayer@{NumericalPlayer}!isOdd@{isOdd}}
+\index{isOdd@{isOdd}!NumericalPlayer@{NumericalPlayer}}
+\doxysubsubsection{\texorpdfstring{isOdd}{isOdd}}
+{\footnotesize\ttfamily \label{class_numerical_player_a6644265f7d25ddb515c29fdfabb25da8} 
+bool Numerical\+Player\+::is\+Odd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_numerical_tic_tac_toe_8h}{Numerical\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_numerical_tic_tac_toe_8cpp}{Numerical\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

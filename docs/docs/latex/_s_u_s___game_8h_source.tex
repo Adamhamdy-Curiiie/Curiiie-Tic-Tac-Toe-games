@@ -1,0 +1,72 @@
+\doxysection{SUS\+\_\+\+Game.\+h}
+\hypertarget{_s_u_s___game_8h_source}{}\label{_s_u_s___game_8h_source}\index{E:/xoooooo/inc/SUS\_Game.h@{E:/xoooooo/inc/SUS\_Game.h}}
+\mbox{\hyperlink{_s_u_s___game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SUS\_GAME\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SUS\_GAME\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_board_game___classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_u_s___board_a653be0dfe8070a59361bd228c0b54f71}{SUS\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_s_u_s___board_a1313a71769c9f6a45bd56a7d1576f5bb}{blank}}\ =\ \textcolor{charliteral}{'.'};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_s_u_s___board_a5b5132dd41a765f45bd76fc6db4b5290}{last\_player}};\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_u_s___board_a4e31a9684419b09da0033f610a64c8e8}{Total\_SUS}}\ =\ 0;\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_u_s___board_ad33c8e098f1b13c4541ecb96643c5d3f}{score\_X}}\ =\ 0;\ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_u_s___board_a2ae853567502a83cf0420c6403b72ab5}{score\_O}}\ =\ 0;\ \ \ }
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_u_s___board_a793142fea42c7dfb4fa608b63c36d232}{count\_total\_sus}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_u_s___board_a92df57de9877b9b2e77227a0818023cc}{check\_and\_count\_sus}}(\textcolor{keywordtype}{char}\ player\_symbol);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_s_u_s___board_a653be0dfe8070a59361bd228c0b54f71}{SUS\_Board}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_a22679cdc9a91a17fea898c66ad821e45}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_a2230a0e70a119a14e7e7380ba9b2cb90}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_a3761b3ce05e2194ff95893b494a3c933}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_aeb2ad5ce9bdd10ecf2d3cf06be14e6ca}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_s_u_s___board_acd2c39612239065da3aea67ac7c27aa4}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_u_s___board_a12a2c000676681da1cd72971265dd964}{get\_score\_X}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_s_u_s___board_ad33c8e098f1b13c4541ecb96643c5d3f}{score\_X}};\ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_s_u_s___board_a78cf8e293852ddea9c07e5b8a05d9e0d}{get\_score\_O}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_s_u_s___board_a2ae853567502a83cf0420c6403b72ab5}{score\_O}};\ \}}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_u_s___player_aec14ab026e01765378cf5928552ba041}{SUS\_Player}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}}<char>\ \{}
+\DoxyCodeLine{00103\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_s_u_s___player_ad32f5829688e84e38b51ef94d7f7f123}{chosen\_letter}};\ }
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00110\ \ \ \ \ vector<Move<char>*>\ \mbox{\hyperlink{class_s_u_s___player_aecc7295d6dcd2b7dd7afbc56b3fd8485}{get\_valid\_moves}}();}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{class_s_u_s___player_aec14ab026e01765378cf5928552ba041}{SUS\_Player}}(\textcolor{keywordtype}{string}\ n,\ \textcolor{keywordtype}{char}\ s,\ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ t);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_s_u_s___player_a6b505c28c140db343fde73b99379da74}{get\_random\_move}}();}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_s_u_s___player_aa43740f75c670a089ffe2e9a4e42493a}{set\_chosen\_letter}}(\textcolor{keywordtype}{char}\ letter)\ \{\ \mbox{\hyperlink{class_s_u_s___player_ad32f5829688e84e38b51ef94d7f7f123}{chosen\_letter}}\ =\ letter;\ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_s_u_s___player_afba86273fb0494d06ac2c59710bde246}{get\_chosen\_letter}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_s_u_s___player_ad32f5829688e84e38b51ef94d7f7f123}{chosen\_letter}};\ \}}
+\DoxyCodeLine{00138\ \};}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00146\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_s_u_s___u_i_ac1a13d00ecf04b1ea3af53f1c08949c1}{SUS\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00147\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{class_s_u_s___u_i_ac1a13d00ecf04b1ea3af53f1c08949c1}{SUS\_UI}}();}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_s_u_s___u_i_ae510c6c91efc4a17d7dadb4282e00e84}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_s_u_s___u_i_a9c7a3c09a5e18a3d89f448ea93b6dea6}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00168\ \};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SUS\_GAME\_H}}
+
+\end{DoxyCode}

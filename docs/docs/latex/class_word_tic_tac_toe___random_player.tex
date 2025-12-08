@@ -1,0 +1,201 @@
+\doxysection{Word\+Tic\+Tac\+Toe\+\_\+\+Random\+Player Class Reference}
+\hypertarget{class_word_tic_tac_toe___random_player}{}\label{class_word_tic_tac_toe___random_player}\index{WordTicTacToe\_RandomPlayer@{WordTicTacToe\_RandomPlayer}}
+
+
+AI player that makes random valid moves.  
+
+
+
+
+{\ttfamily \#include $<$Word\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Word\+Tic\+Tac\+Toe\+\_\+\+Random\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_word_tic_tac_toe___random_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_word_tic_tac_toe___random_player_a9d1642fb1cb3f1fb604268191c65e4d0}{Word\+Tic\+Tac\+Toe\+\_\+\+Random\+Player}} (const string \&\mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}, char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}})
+\begin{DoxyCompactList}\small\item\em Constructor for random player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_word_tic_tac_toe___random_player_a09c8080f23d02989e3d30e0b376d311a}{get\+\_\+random\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random valid move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, T s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, char s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+AI player that makes random valid moves. 
+
+Computer player that randomly selects empty cells and letters $<$char$>$ 
+
+\label{doc-constructors}
+\Hypertarget{class_word_tic_tac_toe___random_player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_word_tic_tac_toe___random_player_a9d1642fb1cb3f1fb604268191c65e4d0}\index{WordTicTacToe\_RandomPlayer@{WordTicTacToe\_RandomPlayer}!WordTicTacToe\_RandomPlayer@{WordTicTacToe\_RandomPlayer}}
+\index{WordTicTacToe\_RandomPlayer@{WordTicTacToe\_RandomPlayer}!WordTicTacToe\_RandomPlayer@{WordTicTacToe\_RandomPlayer}}
+\doxysubsubsection{\texorpdfstring{WordTicTacToe\_RandomPlayer()}{WordTicTacToe\_RandomPlayer()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___random_player_a9d1642fb1cb3f1fb604268191c65e4d0} 
+Word\+Tic\+Tac\+Toe\+\_\+\+Random\+Player\+::\+Word\+Tic\+Tac\+Toe\+\_\+\+Random\+Player (\begin{DoxyParamCaption}\item[{const string \&}]{name}{, }\item[{char}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for random player. 
+
+Constructs a computer-\/controlled random player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s name (e.\+g., "{}\+Computer"{}) \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s symbol (unused in this variant, letters are dynamic)\\
+\hline
+\end{DoxyParams}
+Initializes player with given name and symbol
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s display name (e.\+g., "{}\+Computer"{}, "{}\+AI"{}) \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s symbol (not used in word variant but required by interface)\\
+\hline
+\end{DoxyParams}
+Initializes player as COMPUTER type and seeds random number generator \begin{DoxyNote}{Note}
+Seeds srand with current time for randomness 
+\end{DoxyNote}
+\begin{DoxyPostcond}{Postcondition}
+\doxylink{class_player}{Player} is ready to generate random moves 
+\end{DoxyPostcond}
+
+
+\label{doc-func-members}
+\Hypertarget{class_word_tic_tac_toe___random_player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_word_tic_tac_toe___random_player_a09c8080f23d02989e3d30e0b376d311a}\index{WordTicTacToe\_RandomPlayer@{WordTicTacToe\_RandomPlayer}!get\_random\_move@{get\_random\_move}}
+\index{get\_random\_move@{get\_random\_move}!WordTicTacToe\_RandomPlayer@{WordTicTacToe\_RandomPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_random\_move()}{get\_random\_move()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___random_player_a09c8080f23d02989e3d30e0b376d311a} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Word\+Tic\+Tac\+Toe\+\_\+\+Random\+Player\+::get\+\_\+random\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random valid move. 
+
+Generates a random valid move for the computer player.
+
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object with random empty position and random letter (A-\/Z) 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & If no empty cells are available on the board\\
+\hline
+\end{DoxyExceptions}
+Scans board for empty cells, randomly selects one, and assigns random letter \begin{DoxyNote}{Note}
+Uses rand() for randomization -\/ ensure srand() is called during initialization
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object with random empty cell and random letter (A-\/Z) 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em nullptr} & If no empty cells available or board pointer is null\\
+\hline
+\end{DoxyRetVals}
+Algorithm\+:
+\begin{DoxyEnumerate}
+\item Scans entire 3x3 board for empty cells (\textquotesingle{} \textquotesingle{})
+\item Stores all empty cell coordinates in vector
+\item Randomly selects one empty cell
+\item Randomly selects a letter A-\/Z
+\item Creates and returns \doxylink{class_move}{Move} object
+\end{DoxyEnumerate}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Prints} & error to cerr if board is full or pointer is null \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+Uses rand() for randomization (seeded in constructor) 
+
+Prints move to console for transparency 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Caller must delete returned \doxylink{class_move}{Move} pointer 
+\end{DoxyWarning}
+\begin{DoxyPrecond}{Precondition}
+\doxylink{class_board}{Board} pointer must be set via set\+\_\+board()
+\end{DoxyPrecond}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Move<char>*\ move\ =\ randomPlayer-\/>get\_random\_move();}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (move)\ \{}
+\DoxyCodeLine{\ \ \ \ board-\/>update\_board(move);}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{delete}\ move;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_word_tic_tac_toe_8h}{Word\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_word_tic_tac_toe_8cpp}{Word\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

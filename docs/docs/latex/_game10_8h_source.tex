@@ -1,0 +1,60 @@
+\doxysection{Game10.\+h}
+\hypertarget{_game10_8h_source}{}\label{_game10_8h_source}\index{E:/xoooooo/inc/Game10.h@{E:/xoooooo/inc/Game10.h}}
+\mbox{\hyperlink{_game10_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ GAME10\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ GAME10\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_board_game___classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game10___board_aca8136b723c1d423e6bcc36de4cc0296}{Game10\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game10___board_a49edb913a8527543b367f9173b920498}{blank}}\ =\ \textcolor{charliteral}{'.'};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game10___board_ab2f53d77c45d55a6e9d69da8ee126126}{obstacle}}\ =\ \textcolor{charliteral}{'\#'};\ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game10___board_ae985c7ebbaaf79788dce99ce8c01b3db}{round\_count}}\ =\ 0;\ \ \ \ \ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_game10___board_aca8136b723c1d423e6bcc36de4cc0296}{Game10\_Board}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game10___board_a09f414e16d38bc645d09d51b14441717}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game10___board_a7bd75eec56890df6dbf232a4760aa47e}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game10___board_a744910d091e1441a4e722fb38239f76d}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game10___board_a842a7b05a873aa0085a8c62f7ef3f495}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game10___board_af7452756e854fd00257a46e21c081ed2}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game10___board_a3c29c8917a48c35b312f94988a266db7}{add\_obstacles}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_game10___board_a11f9442b382fd80e55c928d7d2b82d53}{count\_empty\_cells}}();}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game10___player_a9952ad49e6f3943cc28e29b8793b6740}{Game10\_Player}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}}<char>\ \{}
+\DoxyCodeLine{00080\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{class_game10___player_a9952ad49e6f3943cc28e29b8793b6740}{Game10\_Player}}(\textcolor{keywordtype}{string}\ n,\ \textcolor{keywordtype}{char}\ s,\ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ t)}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}}<char>(n,\ s,\ t)\ \{\}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_game10___player_ae36e31791810b75ba7b6a57b9ccaa899}{get\_random\_move}}();}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00101\ \ \ \ \ vector<Move<char>*>\ \mbox{\hyperlink{class_game10___player_a2866ddd8bbc5239d56daa1f26568e26f}{get\_valid\_moves}}();}
+\DoxyCodeLine{00102\ \};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game10___u_i_ac596079356a5645eca082e2783c98f54}{Game10\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00109\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{class_game10___u_i_ac596079356a5645eca082e2783c98f54}{Game10\_UI}}()\ :\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>(\textcolor{stringliteral}{"{}Obstacles\ Tic-\/Tac-\/Toe\ (6x6\ Grid)"{}},\ 2)\ \{\}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_game10___u_i_a05702d68ca60c6614dc99ac8a3a14d19}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_game10___u_i_a8501ea299b0d8e07490766921ba577d7}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00130\ \};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

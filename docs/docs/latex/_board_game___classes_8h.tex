@@ -1,0 +1,61 @@
+\doxysection{E\+:/xoooooo/inc/\+Board\+Game\+\_\+\+Classes.h File Reference}
+\hypertarget{_board_game___classes_8h}{}\label{_board_game___classes_8h}\index{E:/xoooooo/inc/BoardGame\_Classes.h@{E:/xoooooo/inc/BoardGame\_Classes.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_board}{Board$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Base template for any board used in board games. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_move}{Move$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Represents a single move in a board game. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_player}{Player$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Base template for all players (human or AI). \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_u_i}{UI$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Base class for handling user interface and input/output. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_game_manager}{Game\+Manager$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Controls the flow of a board game between two players. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \{ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}{HUMAN}}
+, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}{COMPUTER}}
+, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa0a40e3c91a3a55c9a37428c6d194d0e5}{AI}}
+, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa170e02e86972c2be8559884cc3c12254}{RANDOM}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the type of player in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{_board_game___classes_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}\index{BoardGame\_Classes.h@{BoardGame\_Classes.h}!PlayerType@{PlayerType}}
+\index{PlayerType@{PlayerType}!BoardGame\_Classes.h@{BoardGame\_Classes.h}}
+\doxysubsubsection{\texorpdfstring{PlayerType}{PlayerType}}
+{\footnotesize\ttfamily \label{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf} 
+enum class \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Represents the type of player in the game. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HUMAN@{HUMAN}!BoardGame\_Classes.h@{BoardGame\_Classes.h}}\index{BoardGame\_Classes.h@{BoardGame\_Classes.h}!HUMAN@{HUMAN}}}\Hypertarget{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6}\label{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfaa36c6719f4d3207d858cf956ef1e93b6} 
+HUMAN&A human player. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COMPUTER@{COMPUTER}!BoardGame\_Classes.h@{BoardGame\_Classes.h}}\index{BoardGame\_Classes.h@{BoardGame\_Classes.h}!COMPUTER@{COMPUTER}}}\Hypertarget{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513}\label{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfad19cbc472227d1e3d1d276c2cbc0e513} 
+COMPUTER&A computer-\/controlled player. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AI@{AI}!BoardGame\_Classes.h@{BoardGame\_Classes.h}}\index{BoardGame\_Classes.h@{BoardGame\_Classes.h}!AI@{AI}}}\Hypertarget{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa0a40e3c91a3a55c9a37428c6d194d0e5}\label{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa0a40e3c91a3a55c9a37428c6d194d0e5} 
+AI&An AI player. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RANDOM@{RANDOM}!BoardGame\_Classes.h@{BoardGame\_Classes.h}}\index{BoardGame\_Classes.h@{BoardGame\_Classes.h}!RANDOM@{RANDOM}}}\Hypertarget{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa170e02e86972c2be8559884cc3c12254}\label{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccfa170e02e86972c2be8559884cc3c12254} 
+RANDOM&A Random player. \\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['evaluate_5fblocking_5fmove_0',['evaluate_blocking_move',['../_word_tic_tac_toe_8h.html#a44f0bbc7d63cd1a611cf8bf489c3c541',1,'evaluate_blocking_move(const vector&lt; vector&lt; char &gt; &gt; &amp;board, int x, int y, char letter, const set&lt; string &gt; &amp;dictionary):&#160;WordTicTacToe.cpp'],['../_word_tic_tac_toe_8cpp.html#a44f0bbc7d63cd1a611cf8bf489c3c541',1,'evaluate_blocking_move(const vector&lt; vector&lt; char &gt; &gt; &amp;board, int x, int y, char letter, const set&lt; string &gt; &amp;dictionary):&#160;WordTicTacToe.cpp']]],
+  ['evaluate_5fboard_1',['evaluate_board',['../class_word_tic_tac_toe___smart_player.html#a80efaf774b4fccdae991aff66159e531',1,'WordTicTacToe_SmartPlayer::evaluate_board()'],['../class_five_by_five_a_i_player.html#a0885657ab9d69d29df3ed7ff548f8074',1,'FiveByFiveAIPlayer::evaluate_board()']]],
+  ['evaluate_5fsequence_2',['evaluate_sequence',['../_word_tic_tac_toe_8h.html#af952ca50f6ef64809d3d2f7c7148aa97',1,'evaluate_sequence(const string &amp;seq, const set&lt; string &gt; &amp;dictionary):&#160;WordTicTacToe.cpp'],['../_word_tic_tac_toe_8cpp.html#af952ca50f6ef64809d3d2f7c7148aa97',1,'evaluate_sequence(const string &amp;seq, const set&lt; string &gt; &amp;dictionary):&#160;WordTicTacToe.cpp']]]
+];

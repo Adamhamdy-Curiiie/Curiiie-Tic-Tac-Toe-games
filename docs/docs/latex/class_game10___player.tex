@@ -1,0 +1,122 @@
+\doxysection{Game10\+\_\+\+Player Class Reference}
+\hypertarget{class_game10___player}{}\label{class_game10___player}\index{Game10\_Player@{Game10\_Player}}
+
+
+\doxylink{class_player}{Player} with random move generation.  
+
+
+
+
+{\ttfamily \#include $<$Game10.\+h$>$}
+
+Inheritance diagram for Game10\+\_\+\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game10___player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game10___player_a9952ad49e6f3943cc28e29b8793b6740}{Game10\+\_\+\+Player}} (string n, char s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Creates a player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game10___player_ae36e31791810b75ba7b6a57b9ccaa899}{get\+\_\+random\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random valid move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, char s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_game10___player_a2866ddd8bbc5239d56daa1f26568e26f}{get\+\_\+valid\+\_\+moves}} ()
+\begin{DoxyCompactList}\small\item\em Gets all valid moves. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_player}{Player} with random move generation. 
+
+\label{doc-constructors}
+\Hypertarget{class_game10___player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game10___player_a9952ad49e6f3943cc28e29b8793b6740}\index{Game10\_Player@{Game10\_Player}!Game10\_Player@{Game10\_Player}}
+\index{Game10\_Player@{Game10\_Player}!Game10\_Player@{Game10\_Player}}
+\doxysubsubsection{\texorpdfstring{Game10\_Player()}{Game10\_Player()}}
+{\footnotesize\ttfamily \label{class_game10___player_a9952ad49e6f3943cc28e29b8793b6740} 
+Game10\+\_\+\+Player\+::\+Game10\+\_\+\+Player (\begin{DoxyParamCaption}\item[{string}]{n}{, }\item[{char}]{s}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{t}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Name \\
+\hline
+{\em s} & Symbol \\
+\hline
+{\em t} & \doxylink{class_player}{Player} type \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_game10___player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game10___player_ae36e31791810b75ba7b6a57b9ccaa899}\index{Game10\_Player@{Game10\_Player}!get\_random\_move@{get\_random\_move}}
+\index{get\_random\_move@{get\_random\_move}!Game10\_Player@{Game10\_Player}}
+\doxysubsubsection{\texorpdfstring{get\_random\_move()}{get\_random\_move()}}
+{\footnotesize\ttfamily \label{class_game10___player_ae36e31791810b75ba7b6a57b9ccaa899} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Game10\+\_\+\+Player\+::get\+\_\+random\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a random valid move. 
+
+\begin{DoxyReturn}{Returns}
+Random move or nullptr 
+\end{DoxyReturn}
+\Hypertarget{class_game10___player_a2866ddd8bbc5239d56daa1f26568e26f}\index{Game10\_Player@{Game10\_Player}!get\_valid\_moves@{get\_valid\_moves}}
+\index{get\_valid\_moves@{get\_valid\_moves}!Game10\_Player@{Game10\_Player}}
+\doxysubsubsection{\texorpdfstring{get\_valid\_moves()}{get\_valid\_moves()}}
+{\footnotesize\ttfamily \label{class_game10___player_a2866ddd8bbc5239d56daa1f26568e26f} 
+vector$<$ \mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} $>$ Game10\+\_\+\+Player\+::get\+\_\+valid\+\_\+moves (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets all valid moves. 
+
+\begin{DoxyReturn}{Returns}
+Vector of valid moves 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_game10_8h}{Game10.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_game10_8cpp}{Game10.\+cpp}}\end{DoxyCompactItemize}

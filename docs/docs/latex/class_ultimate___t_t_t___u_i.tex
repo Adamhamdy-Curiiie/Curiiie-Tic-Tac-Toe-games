@@ -1,0 +1,159 @@
+\doxysection{Ultimate\+\_\+\+TTT\+\_\+\+UI\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_ultimate___t_t_t___u_i}{}\label{class_ultimate___t_t_t___u_i}\index{Ultimate\_TTT\_UI$<$ T $>$@{Ultimate\_TTT\_UI$<$ T $>$}}
+
+
+\doxylink{class_u_i}{UI} class for Ultimate Tic Tac Toe game.  
+
+
+
+
+{\ttfamily \#include $<$Ultimate\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Ultimate\+\_\+\+TTT\+\_\+\+UI\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ultimate___t_t_t___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ultimate___t_t_t___u_i_adcb5ad1a611fb7788ff0f17f675a14f7}{Ultimate\+\_\+\+TTT\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructor with welcome message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ultimate___t_t_t___u_i_a4a1bdc06e06196bec1b9d07fc2f32153}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ T $>$ $>$ \&matrix) const override
+\begin{DoxyCompactList}\small\item\em Display the 9x9 board with sub-\/board separators. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ultimate___t_t_t___u_i_a29acbcf20021abbd9872ade354fd3701}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Get move from player (human or computer). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i_ae50eed41905ca2f8dc103d9bef427fe6}{UI}} (string message, int cell\+\_\+display\+\_\+width)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{create\+\_\+player}} (string \&name, T symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Ultimate\+\_\+\+TTT\+\_\+\+UI$<$ T $>$}
+\doxylink{class_u_i}{UI} class for Ultimate Tic Tac Toe game. 
+
+Handles display of the complex 9x9 grid and user input Shows which sub-\/board is currently active
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of symbol used (typically char) \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-constructors}
+\Hypertarget{class_ultimate___t_t_t___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ultimate___t_t_t___u_i_adcb5ad1a611fb7788ff0f17f675a14f7}\index{Ultimate\_TTT\_UI$<$ T $>$@{Ultimate\_TTT\_UI$<$ T $>$}!Ultimate\_TTT\_UI@{Ultimate\_TTT\_UI}}
+\index{Ultimate\_TTT\_UI@{Ultimate\_TTT\_UI}!Ultimate\_TTT\_UI$<$ T $>$@{Ultimate\_TTT\_UI$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Ultimate\_TTT\_UI()}{Ultimate\_TTT\_UI()}}
+{\footnotesize\ttfamily \label{class_ultimate___t_t_t___u_i_adcb5ad1a611fb7788ff0f17f675a14f7} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_ultimate___t_t_t___u_i}{Ultimate\+\_\+\+TTT\+\_\+\+UI}}$<$ T $>$\+::\+Ultimate\+\_\+\+TTT\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor with welcome message. 
+
+Constructor for Ultimate Tic Tac Toe \doxylink{class_u_i}{UI}.
+
+Initializes \doxylink{class_u_i}{UI} with welcome message and cell width 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of symbol used (typically char) \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ultimate___t_t_t___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ultimate___t_t_t___u_i_a4a1bdc06e06196bec1b9d07fc2f32153}\index{Ultimate\_TTT\_UI$<$ T $>$@{Ultimate\_TTT\_UI$<$ T $>$}!display\_board\_matrix@{display\_board\_matrix}}
+\index{display\_board\_matrix@{display\_board\_matrix}!Ultimate\_TTT\_UI$<$ T $>$@{Ultimate\_TTT\_UI$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{display\_board\_matrix()}{display\_board\_matrix()}}
+{\footnotesize\ttfamily \label{class_ultimate___t_t_t___u_i_a4a1bdc06e06196bec1b9d07fc2f32153} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_ultimate___t_t_t___u_i}{Ultimate\+\_\+\+TTT\+\_\+\+UI}}$<$ T $>$\+::display\+\_\+board\+\_\+matrix (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ T $>$ $>$ \&}]{matrix}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Display the 9x9 board with sub-\/board separators. 
+
+Display the 9x9 game board with sub-\/board separators.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & The full 9x9 game board\\
+\hline
+{\em matrix} & The complete 9x9 game board matrix\\
+\hline
+\end{DoxyParams}
+Shows column numbers, row numbers, and visual separators between sub-\/boards 
+
+Reimplemented from \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{UI$<$ T $>$}}.
+
+\Hypertarget{class_ultimate___t_t_t___u_i_a29acbcf20021abbd9872ade354fd3701}\index{Ultimate\_TTT\_UI$<$ T $>$@{Ultimate\_TTT\_UI$<$ T $>$}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Ultimate\_TTT\_UI$<$ T $>$@{Ultimate\_TTT\_UI$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_ultimate___t_t_t___u_i_a29acbcf20021abbd9872ade354fd3701} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_move}{Move}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_ultimate___t_t_t___u_i}{Ultimate\+\_\+\+TTT\+\_\+\+UI}}$<$ T $>$\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get move from player (human or computer). 
+
+Get a move from the current player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{class_move}{Move} object with position and symbol
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player (human or computer) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object containing position and symbol
+\end{DoxyReturn}
+For human players\+: prompts for input and validates against active sub-\/board For computer players\+: generates random valid move 
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ T $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_ultimate_tic_tac_toe_8h}{Ultimate\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_ultimate_tic_tac_toe_8cpp}{Ultimate\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

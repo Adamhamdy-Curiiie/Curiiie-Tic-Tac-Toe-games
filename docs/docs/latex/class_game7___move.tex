@@ -1,0 +1,130 @@
+\doxysection{Game7\+\_\+\+Move Class Reference}
+\hypertarget{class_game7___move}{}\label{class_game7___move}\index{Game7\_Move@{Game7\_Move}}
+
+
+Extended \doxylink{class_move}{Move} class that includes source position.  
+
+
+
+
+{\ttfamily \#include $<$Game7.\+h$>$}
+
+Inheritance diagram for Game7\+\_\+\+Move\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game7___move}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game7___move_aa99172bf812ee35dd9a17368d33f05b5}{Game7\+\_\+\+Move}} (int fx, int fy, int tx, int ty, char sym)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game7___move_aadff4ede8e192777c9ebe93f002b24ef}{get\+\_\+from\+\_\+x}} () const
+\begin{DoxyCompactList}\small\item\em Get source row position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game7___move_a62e0ec7e43117707249a3f23a77d0850}{get\+\_\+from\+\_\+y}} () const
+\begin{DoxyCompactList}\small\item\em Get source column position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_move}{Move$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_move_a100102cb072a2857304023233dac7b42}{Move}} (int \mbox{\hyperlink{class_move_a5f399fb722305d3061e0f6f2438e5390}{x}}, int \mbox{\hyperlink{class_move_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, char \mbox{\hyperlink{class_move_a0bec25acdce91feab1b4c21c26505088}{symbol}})
+\begin{DoxyCompactList}\small\item\em Construct a move at (x, y) using a symbol. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\+\_\+x}} () const
+\begin{DoxyCompactList}\small\item\em Get row index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\+\_\+y}} () const
+\begin{DoxyCompactList}\small\item\em Get column index. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the move symbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_game7___move_aea5d247a5d9cc52df72bb4cc03670dad}{from\+\_\+x}}
+\item 
+int \mbox{\hyperlink{class_game7___move_ae28465f346073aa5b0c18fb8acd077ad}{from\+\_\+y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Extended \doxylink{class_move}{Move} class that includes source position. 
+
+Represents a move from one position to another, storing both the starting position and destination position. 
+
+\label{doc-constructors}
+\Hypertarget{class_game7___move_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game7___move_aa99172bf812ee35dd9a17368d33f05b5}\index{Game7\_Move@{Game7\_Move}!Game7\_Move@{Game7\_Move}}
+\index{Game7\_Move@{Game7\_Move}!Game7\_Move@{Game7\_Move}}
+\doxysubsubsection{\texorpdfstring{Game7\_Move()}{Game7\_Move()}}
+{\footnotesize\ttfamily \label{class_game7___move_aa99172bf812ee35dd9a17368d33f05b5} 
+Game7\+\_\+\+Move\+::\+Game7\+\_\+\+Move (\begin{DoxyParamCaption}\item[{int}]{fx}{, }\item[{int}]{fy}{, }\item[{int}]{tx}{, }\item[{int}]{ty}{, }\item[{char}]{sym}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fx} & Source row position \\
+\hline
+{\em fy} & Source column position \\
+\hline
+{\em tx} & Destination row position \\
+\hline
+{\em ty} & Destination column position \\
+\hline
+{\em sym} & \doxylink{class_player}{Player}\textquotesingle{}s symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_game7___move_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game7___move_aadff4ede8e192777c9ebe93f002b24ef}\index{Game7\_Move@{Game7\_Move}!get\_from\_x@{get\_from\_x}}
+\index{get\_from\_x@{get\_from\_x}!Game7\_Move@{Game7\_Move}}
+\doxysubsubsection{\texorpdfstring{get\_from\_x()}{get\_from\_x()}}
+{\footnotesize\ttfamily \label{class_game7___move_aadff4ede8e192777c9ebe93f002b24ef} 
+int Game7\+\_\+\+Move\+::get\+\_\+from\+\_\+x (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get source row position. 
+
+\begin{DoxyReturn}{Returns}
+Row index of source position 
+\end{DoxyReturn}
+\Hypertarget{class_game7___move_a62e0ec7e43117707249a3f23a77d0850}\index{Game7\_Move@{Game7\_Move}!get\_from\_y@{get\_from\_y}}
+\index{get\_from\_y@{get\_from\_y}!Game7\_Move@{Game7\_Move}}
+\doxysubsubsection{\texorpdfstring{get\_from\_y()}{get\_from\_y()}}
+{\footnotesize\ttfamily \label{class_game7___move_a62e0ec7e43117707249a3f23a77d0850} 
+int Game7\+\_\+\+Move\+::get\+\_\+from\+\_\+y (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get source column position. 
+
+\begin{DoxyReturn}{Returns}
+Column index of source position 
+\end{DoxyReturn}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_game7___move_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game7___move_aea5d247a5d9cc52df72bb4cc03670dad}\index{Game7\_Move@{Game7\_Move}!from\_x@{from\_x}}
+\index{from\_x@{from\_x}!Game7\_Move@{Game7\_Move}}
+\doxysubsubsection{\texorpdfstring{from\_x}{from\_x}}
+{\footnotesize\ttfamily \label{class_game7___move_aea5d247a5d9cc52df72bb4cc03670dad} 
+int Game7\+\_\+\+Move\+::from\+\_\+x\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_game7___move_ae28465f346073aa5b0c18fb8acd077ad}\index{Game7\_Move@{Game7\_Move}!from\_y@{from\_y}}
+\index{from\_y@{from\_y}!Game7\_Move@{Game7\_Move}}
+\doxysubsubsection{\texorpdfstring{from\_y}{from\_y}}
+{\footnotesize\ttfamily \label{class_game7___move_ae28465f346073aa5b0c18fb8acd077ad} 
+int Game7\+\_\+\+Move\+::from\+\_\+y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_game7_8h}{Game7.\+h}}\end{DoxyCompactItemize}

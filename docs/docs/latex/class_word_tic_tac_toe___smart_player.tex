@@ -1,0 +1,415 @@
+\doxysection{Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player Class Reference}
+\hypertarget{class_word_tic_tac_toe___smart_player}{}\label{class_word_tic_tac_toe___smart_player}\index{WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}}
+
+
+Intelligent AI player using Minimax algorithm.  
+
+
+
+
+{\ttfamily \#include $<$Word\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_word_tic_tac_toe___smart_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_word_tic_tac_toe___smart_player_abdd8d76a732dbcee805393bf3f9195b1}{Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player}} (const string \&\mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}, char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}})
+\begin{DoxyCompactList}\small\item\em Constructor for smart AI player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_a362a9072a5e945a52a29557d613a8890}{get\+\_\+smart\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Generates an intelligent move using strategic analysis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, T s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, char s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_a80efaf774b4fccdae991aff66159e531}{evaluate\+\_\+board}} (const vector$<$ vector$<$ char $>$ $>$ \&board, const set$<$ string $>$ \&dictionary)
+\begin{DoxyCompactList}\small\item\em Evaluates board state and returns score. \end{DoxyCompactList}\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_a931b0833c469fda0bd31be07c5cbf93c}{find\+\_\+possible\+\_\+words}} (const vector$<$ char $>$ \&letters, const set$<$ string $>$ \&dictionary)
+\begin{DoxyCompactList}\small\item\em Finds all possible words that can be formed with given letters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_ab9ad40886696bea50304f698554cd219}{calculate\+\_\+move\+\_\+value}} (const vector$<$ vector$<$ char $>$ $>$ \&board, int x, int y, char letter, const set$<$ string $>$ \&dictionary)
+\begin{DoxyCompactList}\small\item\em Checks if placing a letter at position can contribute to valid word. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ T $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Intelligent AI player using Minimax algorithm. 
+
+Uses strategic thinking to find best moves and form valid words $<$char$>$ 
+
+\label{doc-constructors}
+\Hypertarget{class_word_tic_tac_toe___smart_player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_word_tic_tac_toe___smart_player_abdd8d76a732dbcee805393bf3f9195b1}\index{WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}!WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}}
+\index{WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}!WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}}
+\doxysubsubsection{\texorpdfstring{WordTicTacToe\_SmartPlayer()}{WordTicTacToe\_SmartPlayer()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___smart_player_abdd8d76a732dbcee805393bf3f9195b1} 
+Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player\+::\+Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player (\begin{DoxyParamCaption}\item[{const string \&}]{name}{, }\item[{char}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for smart AI player. 
+
+Constructs an intelligent AI player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s name (e.\+g., "{}\+Smart AI"{}) \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s symbol\\
+\hline
+\end{DoxyParams}
+Initializes intelligent player with AI type
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s display name (e.\+g., "{}\+Smart AI"{}, "{}\+Computer"{}) \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player}\textquotesingle{}s symbol (X or O)\\
+\hline
+\end{DoxyParams}
+Initializes player as AI type using strategic algorithms \begin{DoxyPostcond}{Postcondition}
+\doxylink{class_player}{Player} is ready to generate intelligent strategic moves 
+\end{DoxyPostcond}
+\begin{DoxyNote}{Note}
+This player uses heuristic evaluation to find optimal moves 
+\end{DoxyNote}
+
+
+\label{doc-func-members}
+\Hypertarget{class_word_tic_tac_toe___smart_player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_word_tic_tac_toe___smart_player_ab9ad40886696bea50304f698554cd219}\index{WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}!calculate\_move\_value@{calculate\_move\_value}}
+\index{calculate\_move\_value@{calculate\_move\_value}!WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}}
+\doxysubsubsection{\texorpdfstring{calculate\_move\_value()}{calculate\_move\_value()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___smart_player_ab9ad40886696bea50304f698554cd219} 
+int Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player\+::calculate\+\_\+move\+\_\+value (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{letter}{, }\item[{const set$<$ string $>$ \&}]{dictionary}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if placing a letter at position can contribute to valid word. 
+
+Calculates strategic value of placing a letter at specific position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Current board state \\
+\hline
+{\em x} & Row position \\
+\hline
+{\em y} & Column position \\
+\hline
+{\em letter} & Letter to place \\
+\hline
+{\em dictionary} & Reference to dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Score indicating strategic value of the move
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Current board state (3x3 grid) \\
+\hline
+{\em x} & Row position (0-\/2) \\
+\hline
+{\em y} & Column position (0-\/2) \\
+\hline
+{\em letter} & Letter to be placed (A-\/Z) \\
+\hline
+{\em dictionary} & Reference to valid words dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Score indicating strategic value of this move
+\end{DoxyReturn}
+Evaluation process\+:
+\begin{DoxyEnumerate}
+\item Creates hypothetical row/column with letter placed
+\item Checks if placing letter can complete valid words
+\item Tests all possible completions with remaining empty cells
+\item Awards points based on word completion potential
+\end{DoxyEnumerate}
+
+\begin{DoxyParagraph}{Scoring Breakdown\+:}
+
+\begin{DoxyItemize}
+\item +15 points\+: Letter can complete a valid word in row
+\item +15 points\+: Letter can complete a valid word in column
+\item +2 points\+: Bonus for center position (1,1)
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Higher scores indicate more strategic positions 
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+x and y must be valid coordinates (0-\/2) 
+
+letter must be uppercase A-\/Z 
+
+dictionary must be loaded
+\end{DoxyPrecond}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Board:\ C\ A\ \_}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ \ \_\ \_\ \_}}
+\DoxyCodeLine{\textcolor{comment}{//\ \ \ \ \ \ \ \ \_\ \_\ \_}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ value\ =\ \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_ab9ad40886696bea50304f698554cd219}{calculate\_move\_value}}(board,\ 0,\ 2,\ \textcolor{charliteral}{'T'},\ dict);}
+\DoxyCodeLine{\textcolor{comment}{//\ Returns\ high\ score\ because\ "{}CAT"{}\ is\ a\ valid\ word}}
+
+\end{DoxyCode}
+ \Hypertarget{class_word_tic_tac_toe___smart_player_a80efaf774b4fccdae991aff66159e531}\index{WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}!evaluate\_board@{evaluate\_board}}
+\index{evaluate\_board@{evaluate\_board}!WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}}
+\doxysubsubsection{\texorpdfstring{evaluate\_board()}{evaluate\_board()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___smart_player_a80efaf774b4fccdae991aff66159e531} 
+int Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player\+::evaluate\+\_\+board (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{const set$<$ string $>$ \&}]{dictionary}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Evaluates board state and returns score. 
+
+Evaluates the current board state for strategic advantage.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Current board state \\
+\hline
+{\em dictionary} & Reference to valid words dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Score\+: positive if advantageous, negative if disadvantageous
+\end{DoxyReturn}
+Checks for winning words and strategic positions
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Current board matrix (3x3 grid) \\
+\hline
+{\em dictionary} & Reference to valid words set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Score indicating board advantage (higher = better for AI)
+\end{DoxyReturn}
+Evaluation criteria\+:
+\begin{DoxyItemize}
+\item Checks rows for potential word completion (+3 points)
+\item Checks columns for potential word completion (+3 points)
+\item Evaluates proximity to forming valid dictionary words
+\item Positive score = advantageous position
+\item Negative score = disadvantageous position
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+This is a heuristic function used by the move selection algorithm 
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+\doxylink{class_board}{Board} must be valid 3x3 matrix 
+
+Dictionary must be loaded with valid words
+\end{DoxyPrecond}
+\begin{DoxyParagraph}{Scoring System\+:}
+
+\begin{DoxyItemize}
+\item +3\+: Row with 2 letters and 1 empty space (potential word)
+\item +3\+: Column with 2 letters and 1 empty space (potential word) 
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\Hypertarget{class_word_tic_tac_toe___smart_player_a931b0833c469fda0bd31be07c5cbf93c}\index{WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}!find\_possible\_words@{find\_possible\_words}}
+\index{find\_possible\_words@{find\_possible\_words}!WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}}
+\doxysubsubsection{\texorpdfstring{find\_possible\_words()}{find\_possible\_words()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___smart_player_a931b0833c469fda0bd31be07c5cbf93c} 
+vector$<$ string $>$ Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player\+::find\+\_\+possible\+\_\+words (\begin{DoxyParamCaption}\item[{const vector$<$ char $>$ \&}]{letters}{, }\item[{const set$<$ string $>$ \&}]{dictionary}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Finds all possible words that can be formed with given letters. 
+
+Finds all possible valid words that can be formed from given letters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em letters} & Vector of available letters \\
+\hline
+{\em dictionary} & Reference to valid words dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of valid 3-\/letter words
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em letters} & Vector of available letters \\
+\hline
+{\em dictionary} & Reference to valid words set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of valid 3-\/letter words that can be formed
+\end{DoxyReturn}
+Algorithm\+:
+\begin{DoxyEnumerate}
+\item Tries all permutations of 3 letters from available letters
+\item Checks each permutation against dictionary
+\item Returns list of all valid words found
+\end{DoxyEnumerate}
+
+\begin{DoxyNote}{Note}
+Returns empty vector if fewer than 3 letters provided 
+\end{DoxyNote}
+\begin{DoxyPrecond}{Precondition}
+letters must contain at least 3 characters 
+
+dictionary must be loaded with valid words
+\end{DoxyPrecond}
+\begin{DoxyParagraph}{Example\+:}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{vector<char>\ letters\ =\ \{\textcolor{charliteral}{'C'},\ \textcolor{charliteral}{'A'},\ \textcolor{charliteral}{'T'},\ \textcolor{charliteral}{'R'}\};}
+\DoxyCodeLine{vector<string>\ words\ =\ \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_a931b0833c469fda0bd31be07c5cbf93c}{find\_possible\_words}}(letters,\ dict);}
+\DoxyCodeLine{\textcolor{comment}{//\ Returns:\ ["{}CAT"{},\ "{}CAR"{},\ "{}TAR"{},\ "{}RAT"{},\ "{}ART"{},\ ...]}}
+
+\end{DoxyCode}
+ 
+\end{DoxyParagraph}
+\Hypertarget{class_word_tic_tac_toe___smart_player_a362a9072a5e945a52a29557d613a8890}\index{WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}!get\_smart\_move@{get\_smart\_move}}
+\index{get\_smart\_move@{get\_smart\_move}!WordTicTacToe\_SmartPlayer@{WordTicTacToe\_SmartPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_smart\_move()}{get\_smart\_move()}}
+{\footnotesize\ttfamily \label{class_word_tic_tac_toe___smart_player_a362a9072a5e945a52a29557d613a8890} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Word\+Tic\+Tac\+Toe\+\_\+\+Smart\+Player\+::get\+\_\+smart\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates an intelligent move using strategic analysis. 
+
+Generates an intelligent strategic move using AI algorithms.
+
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object with best strategic position and letter
+\end{DoxyReturn}
+Analyzes board state, evaluates possible words, and selects optimal move \begin{DoxyNote}{Note}
+Much smarter than random player -\/ tries to form valid words
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_move}{Move} object with best strategic position and letter 
+\end{DoxyReturn}
+
+\begin{DoxyRetVals}{Return values}
+{\em Move\texorpdfstring{$\ast$}{*}} & Optimal move based on strategic analysis \\
+\hline
+{\em Move\texorpdfstring{$\ast$}{*}} & Random valid move if no strategic advantage found \\
+\hline
+{\em nullptr} & If no valid moves available\\
+\hline
+\end{DoxyRetVals}
+AI Algorithm\+:
+\begin{DoxyEnumerate}
+\item Evaluates all empty cells on the board
+\item For each empty cell, tests all 26 letters (A-\/Z)
+\item Calculates strategic value for each position+letter combination
+\item Selects move with highest strategic value
+\item Falls back to random move if no strategic advantage
+\end{DoxyEnumerate}
+
+\begin{DoxyParagraph}{Strategic Considerations\+:}
+
+\begin{DoxyItemize}
+\item Prioritizes moves that can form valid words
+\item Considers both immediate wins and future opportunities
+\item Evaluates defensive positions to block opponent
+\item Prefers center positions when values are equal
+\end{DoxyItemize}
+\end{DoxyParagraph}
+\begin{DoxyNote}{Note}
+Much more intelligent than random player 
+
+Prints selected move to console for transparency 
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+Caller must delete returned \doxylink{class_move}{Move} pointer 
+\end{DoxyWarning}
+\begin{DoxyPrecond}{Precondition}
+\doxylink{class_board}{Board} pointer must be set and valid 
+
+Dictionary must be loaded in board
+\end{DoxyPrecond}
+\begin{DoxySeeAlso}{See also}
+\doxylink{class_word_tic_tac_toe___smart_player_ab9ad40886696bea50304f698554cd219}{calculate\+\_\+move\+\_\+value()} 
+
+\doxylink{class_word_tic_tac_toe___smart_player_a80efaf774b4fccdae991aff66159e531}{evaluate\+\_\+board()}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Move<char>*\ move\ =\ smartPlayer-\/>get\_smart\_move();}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (move)\ \{}
+\DoxyCodeLine{\ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}AI\ selected:\ "{}}\ <<\ move-\/>\mbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\_x}}()\ <<\ \textcolor{stringliteral}{"{},\ "{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ <<\ move-\/>\mbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\_y}}()\ <<\ \textcolor{stringliteral}{"{},\ "{}}\ <<\ move-\/>\mbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\_symbol}}();}
+\DoxyCodeLine{\ \ \ \ \textcolor{keyword}{delete}\ move;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_word_tic_tac_toe_8h}{Word\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_word_tic_tac_toe_8cpp}{Word\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

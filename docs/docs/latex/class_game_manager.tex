@@ -1,0 +1,114 @@
+\doxysection{Game\+Manager\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_game_manager}{}\label{class_game_manager}\index{GameManager$<$ T $>$@{GameManager$<$ T $>$}}
+
+
+Controls the flow of a board game between two players.  
+
+
+
+
+{\ttfamily \#include $<$Board\+Game\+\_\+\+Classes.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_manager_addaf3682d9783bdc432a8e3273b5b92c}{Game\+Manager}} (\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}b, \mbox{\hyperlink{class_player}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*}p\mbox{[}2\mbox{]}, \mbox{\hyperlink{class_u_i}{UI}}$<$ T $>$ \texorpdfstring{$\ast$}{*}u)
+\begin{DoxyCompactList}\small\item\em Construct a game manager with board, players, and \doxylink{class_u_i}{UI}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_manager_a71f46d5189dac5c773f608cea1b5a203}{run}} ()
+\begin{DoxyCompactList}\small\item\em Run the main game loop until someone wins or the game ends. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_manager_a97608354a255ec6916f64fc51e49f9e1}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Game board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_manager_abc7b7dc6bd0e89a29886ace8a7db60bd}{players}} \mbox{[}2\mbox{]}
+\begin{DoxyCompactList}\small\item\em Two players. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_u_i}{UI}}$<$ T $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_manager_a2a3d79a969e0ff1ae529058779039ea9}{ui}}
+\begin{DoxyCompactList}\small\item\em User interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Game\+Manager$<$ T $>$}
+Controls the flow of a board game between two players. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of symbol used on the board. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-constructors}
+\Hypertarget{class_game_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_manager_addaf3682d9783bdc432a8e3273b5b92c}\index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!GameManager@{GameManager}}
+\index{GameManager@{GameManager}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GameManager()}{GameManager()}}
+{\footnotesize\ttfamily \label{class_game_manager_addaf3682d9783bdc432a8e3273b5b92c} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_game_manager}{Game\+Manager}}$<$ T $>$\+::\+Game\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_board}{Board}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{\mbox{\hyperlink{class_player}{Player}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{p}{\mbox{[}2\mbox{]}, }\item[{\mbox{\hyperlink{class_u_i}{UI}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{u}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a game manager with board, players, and \doxylink{class_u_i}{UI}. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_game_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_manager_a71f46d5189dac5c773f608cea1b5a203}\index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!run@{run}}
+\index{run@{run}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \label{class_game_manager_a71f46d5189dac5c773f608cea1b5a203} 
+template$<$typename T$>$ \\
+void \mbox{\hyperlink{class_game_manager}{Game\+Manager}}$<$ T $>$\+::run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Run the main game loop until someone wins or the game ends. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_game_manager_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_manager_a97608354a255ec6916f64fc51e49f9e1}\index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!boardPtr@{boardPtr}}
+\index{boardPtr@{boardPtr}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{boardPtr}{boardPtr}}
+{\footnotesize\ttfamily \label{class_game_manager_a97608354a255ec6916f64fc51e49f9e1} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_board}{Board}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_manager}{Game\+Manager}}$<$ T $>$\+::board\+Ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game board. 
+
+\Hypertarget{class_game_manager_abc7b7dc6bd0e89a29886ace8a7db60bd}\index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!players@{players}}
+\index{players@{players}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{players}{players}}
+{\footnotesize\ttfamily \label{class_game_manager_abc7b7dc6bd0e89a29886ace8a7db60bd} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_player}{Player}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_manager}{Game\+Manager}}$<$ T $>$\+::players\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Two players. 
+
+\Hypertarget{class_game_manager_a2a3d79a969e0ff1ae529058779039ea9}\index{GameManager$<$ T $>$@{GameManager$<$ T $>$}!ui@{ui}}
+\index{ui@{ui}!GameManager$<$ T $>$@{GameManager$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily \label{class_game_manager_a2a3d79a969e0ff1ae529058779039ea9} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_u_i}{UI}}$<$T$>$\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game_manager}{Game\+Manager}}$<$ T $>$\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+User interface. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_board_game___classes_8h}{Board\+Game\+\_\+\+Classes.\+h}}\end{DoxyCompactItemize}
