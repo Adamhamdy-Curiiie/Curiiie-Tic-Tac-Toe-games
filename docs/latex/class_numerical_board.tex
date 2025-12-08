@@ -1,0 +1,234 @@
+\doxysection{Numerical\+Board Class Reference}
+\hypertarget{class_numerical_board}{}\label{class_numerical_board}\index{NumericalBoard@{NumericalBoard}}
+
+
+3x3 board using numbers (odd\+: 1-\/9, even\+: 2-\/8)  
+
+
+
+
+{\ttfamily \#include $<$Numerical\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Numerical\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_numerical_board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_numerical_board_a2bdb6a8f24c083a44b787956397ad1b6}{Numerical\+Board}} ()
+\item 
+bool \mbox{\hyperlink{class_numerical_board_a5aeefbecf843cc4c5c24a9b334fa4d5f}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Apply move with number validation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_board_a9be2f3bb8421931eff1d7759a2260758}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if any line sums to 15. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_board_ab4f721f7e0c10bd57cc96a64a406c877}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if a player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_board_aececb759222d75ffd4f263de0e383653}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Draw when board is full (9 moves). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_board_a37fe30b4c354cdf3a80adc453323c791}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_numerical_board_a129f9ce506738699be33d04835af6196}{is\+\_\+number\+\_\+used}} (int num, bool is\+Odd)
+\begin{DoxyCompactList}\small\item\em Check if number has been used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_numerical_board_a64d6b9e1803f7f56c6ee6df4a20395e8}{set\+\_\+current\+\_\+player\+\_\+odd}} (bool odd)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_numerical_board_a33e410c96ab3921bd5178ce8d3adb2a4}{check\+\_\+sum\+\_\+15}} (int a, int b, int c)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_numerical_board_af677587e0b7f970b4fc29f5cfd58117e}{current\+Move\+Is\+Odd}}
+\item 
+set$<$ int $>$ \mbox{\hyperlink{class_numerical_board_a738acf84f8e9dc25008c59505b2183d8}{used\+\_\+numbers\+\_\+odd}}
+\item 
+set$<$ int $>$ \mbox{\hyperlink{class_numerical_board_a122f5118d8d54120983ee1896bf05021}{used\+\_\+numbers\+\_\+even}}
+\item 
+int \mbox{\hyperlink{class_numerical_board_ac4fb55a78a563d97c0bb8aa768ef5431}{blank}} = 0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ int $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+3x3 board using numbers (odd\+: 1-\/9, even\+: 2-\/8) 
+
+\label{doc-constructors}
+\Hypertarget{class_numerical_board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_numerical_board_a2bdb6a8f24c083a44b787956397ad1b6}\index{NumericalBoard@{NumericalBoard}!NumericalBoard@{NumericalBoard}}
+\index{NumericalBoard@{NumericalBoard}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{NumericalBoard()}{NumericalBoard()}}
+{\footnotesize\ttfamily \label{class_numerical_board_a2bdb6a8f24c083a44b787956397ad1b6} 
+Numerical\+Board\+::\+Numerical\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_numerical_board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_numerical_board_a33e410c96ab3921bd5178ce8d3adb2a4}\index{NumericalBoard@{NumericalBoard}!check\_sum\_15@{check\_sum\_15}}
+\index{check\_sum\_15@{check\_sum\_15}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{check\_sum\_15()}{check\_sum\_15()}}
+{\footnotesize\ttfamily \label{class_numerical_board_a33e410c96ab3921bd5178ce8d3adb2a4} 
+bool Numerical\+Board\+::check\+\_\+sum\+\_\+15 (\begin{DoxyParamCaption}\item[{int}]{a}{, }\item[{int}]{b}{, }\item[{int}]{c}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_numerical_board_a37fe30b4c354cdf3a80adc453323c791}\index{NumericalBoard@{NumericalBoard}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_numerical_board_a37fe30b4c354cdf3a80adc453323c791} 
+bool Numerical\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the game is over. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical_board_aececb759222d75ffd4f263de0e383653}\index{NumericalBoard@{NumericalBoard}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_numerical_board_aececb759222d75ffd4f263de0e383653} 
+bool Numerical\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw when board is full (9 moves). 
+
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical_board_ab4f721f7e0c10bd57cc96a64a406c877}\index{NumericalBoard@{NumericalBoard}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_numerical_board_ab4f721f7e0c10bd57cc96a64a406c877} 
+bool Numerical\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has lost. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical_board_a129f9ce506738699be33d04835af6196}\index{NumericalBoard@{NumericalBoard}!is\_number\_used@{is\_number\_used}}
+\index{is\_number\_used@{is\_number\_used}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{is\_number\_used()}{is\_number\_used()}}
+{\footnotesize\ttfamily \label{class_numerical_board_a129f9ce506738699be33d04835af6196} 
+bool Numerical\+Board\+::is\+\_\+number\+\_\+used (\begin{DoxyParamCaption}\item[{int}]{num}{, }\item[{bool}]{is\+Odd}{}\end{DoxyParamCaption})}
+
+
+
+Check if number has been used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Number to check \\
+\hline
+{\em is\+Odd} & Whether to check odd or even pool \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_numerical_board_a9be2f3bb8421931eff1d7759a2260758}\index{NumericalBoard@{NumericalBoard}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_numerical_board_a9be2f3bb8421931eff1d7759a2260758} 
+bool Numerical\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if any line sums to 15. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ int $>$}}.
+
+\Hypertarget{class_numerical_board_a64d6b9e1803f7f56c6ee6df4a20395e8}\index{NumericalBoard@{NumericalBoard}!set\_current\_player\_odd@{set\_current\_player\_odd}}
+\index{set\_current\_player\_odd@{set\_current\_player\_odd}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{set\_current\_player\_odd()}{set\_current\_player\_odd()}}
+{\footnotesize\ttfamily \label{class_numerical_board_a64d6b9e1803f7f56c6ee6df4a20395e8} 
+void Numerical\+Board\+::set\+\_\+current\+\_\+player\+\_\+odd (\begin{DoxyParamCaption}\item[{bool}]{odd}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{class_numerical_board_a5aeefbecf843cc4c5c24a9b334fa4d5f}\index{NumericalBoard@{NumericalBoard}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_numerical_board_a5aeefbecf843cc4c5c24a9b334fa4d5f} 
+bool Numerical\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ int $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Apply move with number validation. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ int $>$}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_numerical_board_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_numerical_board_ac4fb55a78a563d97c0bb8aa768ef5431}\index{NumericalBoard@{NumericalBoard}!blank@{blank}}
+\index{blank@{blank}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{blank}{blank}}
+{\footnotesize\ttfamily \label{class_numerical_board_ac4fb55a78a563d97c0bb8aa768ef5431} 
+int Numerical\+Board\+::blank = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_numerical_board_af677587e0b7f970b4fc29f5cfd58117e}\index{NumericalBoard@{NumericalBoard}!currentMoveIsOdd@{currentMoveIsOdd}}
+\index{currentMoveIsOdd@{currentMoveIsOdd}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{currentMoveIsOdd}{currentMoveIsOdd}}
+{\footnotesize\ttfamily \label{class_numerical_board_af677587e0b7f970b4fc29f5cfd58117e} 
+bool Numerical\+Board\+::current\+Move\+Is\+Odd\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_numerical_board_a122f5118d8d54120983ee1896bf05021}\index{NumericalBoard@{NumericalBoard}!used\_numbers\_even@{used\_numbers\_even}}
+\index{used\_numbers\_even@{used\_numbers\_even}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{used\_numbers\_even}{used\_numbers\_even}}
+{\footnotesize\ttfamily \label{class_numerical_board_a122f5118d8d54120983ee1896bf05021} 
+set$<$int$>$ Numerical\+Board\+::used\+\_\+numbers\+\_\+even\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_numerical_board_a738acf84f8e9dc25008c59505b2183d8}\index{NumericalBoard@{NumericalBoard}!used\_numbers\_odd@{used\_numbers\_odd}}
+\index{used\_numbers\_odd@{used\_numbers\_odd}!NumericalBoard@{NumericalBoard}}
+\doxysubsubsection{\texorpdfstring{used\_numbers\_odd}{used\_numbers\_odd}}
+{\footnotesize\ttfamily \label{class_numerical_board_a738acf84f8e9dc25008c59505b2183d8} 
+set$<$int$>$ Numerical\+Board\+::used\+\_\+numbers\+\_\+odd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_numerical_tic_tac_toe_8h}{Numerical\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_numerical_tic_tac_toe_8cpp}{Numerical\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}

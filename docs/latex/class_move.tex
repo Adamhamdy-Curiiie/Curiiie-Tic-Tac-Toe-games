@@ -1,0 +1,140 @@
+\doxysection{Move\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_move}{}\label{class_move}\index{Move$<$ T $>$@{Move$<$ T $>$}}
+
+
+Represents a single move in a board game.  
+
+
+
+
+{\ttfamily \#include $<$Board\+Game\+\_\+\+Classes.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_move_a100102cb072a2857304023233dac7b42}{Move}} (int \mbox{\hyperlink{class_move_a5f399fb722305d3061e0f6f2438e5390}{x}}, int \mbox{\hyperlink{class_move_abe58a4df9d3e121d06a3b2d1815f012e}{y}}, T \mbox{\hyperlink{class_move_a0bec25acdce91feab1b4c21c26505088}{symbol}})
+\begin{DoxyCompactList}\small\item\em Construct a move at (x, y) using a symbol. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_move_a9d4f543a81e361f872d37bcfb64d5b55}{get\+\_\+x}} () const
+\begin{DoxyCompactList}\small\item\em Get row index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_move_a96469802a55c9083a1e93c7edec8a00c}{get\+\_\+y}} () const
+\begin{DoxyCompactList}\small\item\em Get column index. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_move_a595bf740852c05a1cb425ef2640fd4ff}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the move symbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_move_a5f399fb722305d3061e0f6f2438e5390}{x}}
+\begin{DoxyCompactList}\small\item\em Row index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_move_abe58a4df9d3e121d06a3b2d1815f012e}{y}}
+\begin{DoxyCompactList}\small\item\em Column index. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_move_a0bec25acdce91feab1b4c21c26505088}{symbol}}
+\begin{DoxyCompactList}\small\item\em Symbol used in the move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Move$<$ T $>$}
+Represents a single move in a board game. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type of symbol placed on the board (e.\+g., char, int). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-constructors}
+\Hypertarget{class_move_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_move_a100102cb072a2857304023233dac7b42}\index{Move$<$ T $>$@{Move$<$ T $>$}!Move@{Move}}
+\index{Move@{Move}!Move$<$ T $>$@{Move$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily \label{class_move_a100102cb072a2857304023233dac7b42} 
+template$<$typename T$>$ \\
+\mbox{\hyperlink{class_move}{Move}}$<$ T $>$\+::\+Move (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{T}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a move at (x, y) using a symbol. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_move_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_move_a595bf740852c05a1cb425ef2640fd4ff}\index{Move$<$ T $>$@{Move$<$ T $>$}!get\_symbol@{get\_symbol}}
+\index{get\_symbol@{get\_symbol}!Move$<$ T $>$@{Move$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_symbol()}{get\_symbol()}}
+{\footnotesize\ttfamily \label{class_move_a595bf740852c05a1cb425ef2640fd4ff} 
+template$<$typename T$>$ \\
+T \mbox{\hyperlink{class_move}{Move}}$<$ T $>$\+::get\+\_\+symbol (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the move symbol. 
+
+\Hypertarget{class_move_a9d4f543a81e361f872d37bcfb64d5b55}\index{Move$<$ T $>$@{Move$<$ T $>$}!get\_x@{get\_x}}
+\index{get\_x@{get\_x}!Move$<$ T $>$@{Move$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_x()}{get\_x()}}
+{\footnotesize\ttfamily \label{class_move_a9d4f543a81e361f872d37bcfb64d5b55} 
+template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_move}{Move}}$<$ T $>$\+::get\+\_\+x (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get row index. 
+
+\Hypertarget{class_move_a96469802a55c9083a1e93c7edec8a00c}\index{Move$<$ T $>$@{Move$<$ T $>$}!get\_y@{get\_y}}
+\index{get\_y@{get\_y}!Move$<$ T $>$@{Move$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get\_y()}{get\_y()}}
+{\footnotesize\ttfamily \label{class_move_a96469802a55c9083a1e93c7edec8a00c} 
+template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_move}{Move}}$<$ T $>$\+::get\+\_\+y (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column index. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_move_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_move_a0bec25acdce91feab1b4c21c26505088}\index{Move$<$ T $>$@{Move$<$ T $>$}!symbol@{symbol}}
+\index{symbol@{symbol}!Move$<$ T $>$@{Move$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{symbol}{symbol}}
+{\footnotesize\ttfamily \label{class_move_a0bec25acdce91feab1b4c21c26505088} 
+template$<$typename T$>$ \\
+T \mbox{\hyperlink{class_move}{Move}}$<$ T $>$\+::symbol\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Symbol used in the move. 
+
+\Hypertarget{class_move_a5f399fb722305d3061e0f6f2438e5390}\index{Move$<$ T $>$@{Move$<$ T $>$}!x@{x}}
+\index{x@{x}!Move$<$ T $>$@{Move$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{class_move_a5f399fb722305d3061e0f6f2438e5390} 
+template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_move}{Move}}$<$ T $>$\+::x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Row index. 
+
+\Hypertarget{class_move_abe58a4df9d3e121d06a3b2d1815f012e}\index{Move$<$ T $>$@{Move$<$ T $>$}!y@{y}}
+\index{y@{y}!Move$<$ T $>$@{Move$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{class_move_abe58a4df9d3e121d06a3b2d1815f012e} 
+template$<$typename T$>$ \\
+int \mbox{\hyperlink{class_move}{Move}}$<$ T $>$\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Column index. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_board_game___classes_8h}{Board\+Game\+\_\+\+Classes.\+h}}\end{DoxyCompactItemize}

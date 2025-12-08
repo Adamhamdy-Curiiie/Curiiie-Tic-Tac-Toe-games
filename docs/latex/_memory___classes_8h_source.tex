@@ -1,0 +1,48 @@
+\doxysection{Memory\+\_\+\+Classes.\+h}
+\hypertarget{_memory___classes_8h_source}{}\label{_memory___classes_8h_source}\index{E:/xoooooo/inc/Memory\_Classes.h@{E:/xoooooo/inc/Memory\_Classes.h}}
+\mbox{\hyperlink{_memory___classes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ MEMORY\_CLASSES\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ MEMORY\_CLASSES\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_board_game___classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cctype>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_memory___board_a235743f1bdf5051526c92cc59b276340}{Memory\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_memory___board_ad39ba4c6ad3586ae9a9b1fddf32f28e8}{blank\_symbol}}\ =\ \textcolor{charliteral}{'\ '};\ }
+\DoxyCodeLine{00025\ \ \ \ \ vector<tuple<int,\ int,\ char>>\ \mbox{\hyperlink{class_memory___board_a69682b0104d393f4249fdcee806477c2}{move\_history}};\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_memory___board_a235743f1bdf5051526c92cc59b276340}{Memory\_Board}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___board_ab21d9e1025f3a8ae29dd17a5fb368462}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___board_a8ebd3f4825d7a3ac78cc77ef85738de9}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___board_af836b7d5099f4c388418fa038d9e271d}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*)\textcolor{keyword}{\ override\ }\{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___board_ad80149de055f8902191f1124d23619df}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_memory___board_ad806fdf49150705c3f4892e74e8dedc4}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_memory___u_i_a86e9d67bbb016aa6b49a61d4401d8ae4}{Memory\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_memory___u_i_ae5f2c6d9f7a22dfc8602f195d8376aed}{substitute}}\ =\ \textcolor{charliteral}{'\#'};}
+\DoxyCodeLine{00075\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{class_memory___u_i_a86e9d67bbb016aa6b49a61d4401d8ae4}{Memory\_UI}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_memory___u_i_a9081a7ca8792bf1f888951beea19b65a}{\string~Memory\_UI}}()\ \{\};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_memory___u_i_a358c7741b0819cdcfa16a6c4a837d0f8}{display\_board\_matrix}}(\textcolor{keyword}{const}\ vector<vector<char>>\ \&matrix)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}*\ \mbox{\hyperlink{class_memory___u_i_a056bb62e0e737269c29383c94e48e58a}{create\_player}}(\textcolor{keywordtype}{string}\&\ name,\ \textcolor{keywordtype}{char}\ symbol,\ \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{PlayerType}}\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_memory___u_i_a3e27165bf43524664d5bcd76e52910cb}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00084\ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MEMORY\_CLASSES\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,269 @@
+\doxysection{Game10\+\_\+\+Board Class Reference}
+\hypertarget{class_game10___board}{}\label{class_game10___board}\index{Game10\_Board@{Game10\_Board}}
+
+
+Game board that adds obstacles after each round.  
+
+
+
+
+{\ttfamily \#include $<$Game10.\+h$>$}
+
+Inheritance diagram for Game10\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game10___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game10___board_aca8136b723c1d423e6bcc36de4cc0296}{Game10\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a 6x6 board. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game10___board_a09f414e16d38bc645d09d51b14441717}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Places a move and adds obstacles every 2 moves. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game10___board_a7bd75eec56890df6dbf232a4760aa47e}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks for 4 in a row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game10___board_a744910d091e1441a4e722fb38239f76d}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em No losing condition in this game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game10___board_a842a7b05a873aa0085a8c62f7ef3f495}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if board is full. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game10___board_af7452756e854fd00257a46e21c081ed2}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Checks if game ended. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_game10___board_a3c29c8917a48c35b312f94988a266db7}{add\+\_\+obstacles}} ()
+\begin{DoxyCompactList}\small\item\em Adds 2 random obstacles to the board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game10___board_a11f9442b382fd80e55c928d7d2b82d53}{count\+\_\+empty\+\_\+cells}} ()
+\begin{DoxyCompactList}\small\item\em Counts empty cells on board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_game10___board_a49edb913a8527543b367f9173b920498}{blank}} = \textquotesingle{}.\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Empty cell symbol. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_game10___board_ab2f53d77c45d55a6e9d69da8ee126126}{obstacle}} = \textquotesingle{}\#\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Obstacle symbol. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_game10___board_ae985c7ebbaaf79788dce99ce8c01b3db}{round\+\_\+count}} = 0
+\begin{DoxyCompactList}\small\item\em Round counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Game board that adds obstacles after each round. 
+
+\label{doc-constructors}
+\Hypertarget{class_game10___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game10___board_aca8136b723c1d423e6bcc36de4cc0296}\index{Game10\_Board@{Game10\_Board}!Game10\_Board@{Game10\_Board}}
+\index{Game10\_Board@{Game10\_Board}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{Game10\_Board()}{Game10\_Board()}}
+{\footnotesize\ttfamily \label{class_game10___board_aca8136b723c1d423e6bcc36de4cc0296} 
+Game10\+\_\+\+Board\+::\+Game10\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a 6x6 board. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_game10___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game10___board_a3c29c8917a48c35b312f94988a266db7}\index{Game10\_Board@{Game10\_Board}!add\_obstacles@{add\_obstacles}}
+\index{add\_obstacles@{add\_obstacles}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{add\_obstacles()}{add\_obstacles()}}
+{\footnotesize\ttfamily \label{class_game10___board_a3c29c8917a48c35b312f94988a266db7} 
+void Game10\+\_\+\+Board\+::add\+\_\+obstacles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adds 2 random obstacles to the board. 
+
+\Hypertarget{class_game10___board_a11f9442b382fd80e55c928d7d2b82d53}\index{Game10\_Board@{Game10\_Board}!count\_empty\_cells@{count\_empty\_cells}}
+\index{count\_empty\_cells@{count\_empty\_cells}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{count\_empty\_cells()}{count\_empty\_cells()}}
+{\footnotesize\ttfamily \label{class_game10___board_a11f9442b382fd80e55c928d7d2b82d53} 
+int Game10\+\_\+\+Board\+::count\+\_\+empty\+\_\+cells (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Counts empty cells on board. 
+
+\begin{DoxyReturn}{Returns}
+Number of empty cells 
+\end{DoxyReturn}
+\Hypertarget{class_game10___board_af7452756e854fd00257a46e21c081ed2}\index{Game10\_Board@{Game10\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_game10___board_af7452756e854fd00257a46e21c081ed2} 
+bool Game10\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if game ended. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if win or draw 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_game10___board_a842a7b05a873aa0085a8c62f7ef3f495}\index{Game10\_Board@{Game10\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_game10___board_a842a7b05a873aa0085a8c62f7ef3f495} 
+bool Game10\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks if board is full. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if draw 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_game10___board_a744910d091e1441a4e722fb38239f76d}\index{Game10\_Board@{Game10\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_game10___board_a744910d091e1441a4e722fb38239f76d} 
+bool Game10\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+No losing condition in this game. 
+
+\begin{DoxyReturn}{Returns}
+Always false 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_game10___board_a7bd75eec56890df6dbf232a4760aa47e}\index{Game10\_Board@{Game10\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_game10___board_a7bd75eec56890df6dbf232a4760aa47e} 
+bool Game10\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks for 4 in a row. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & \doxylink{class_player}{Player} to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if player wins 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_game10___board_a09f414e16d38bc645d09d51b14441717}\index{Game10\_Board@{Game10\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_game10___board_a09f414e16d38bc645d09d51b14441717} 
+bool Game10\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Places a move and adds obstacles every 2 moves. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move to place \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if move is valid 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_game10___board_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game10___board_a49edb913a8527543b367f9173b920498}\index{Game10\_Board@{Game10\_Board}!blank@{blank}}
+\index{blank@{blank}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{blank}{blank}}
+{\footnotesize\ttfamily \label{class_game10___board_a49edb913a8527543b367f9173b920498} 
+char Game10\+\_\+\+Board\+::blank = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Empty cell symbol. 
+
+\Hypertarget{class_game10___board_ab2f53d77c45d55a6e9d69da8ee126126}\index{Game10\_Board@{Game10\_Board}!obstacle@{obstacle}}
+\index{obstacle@{obstacle}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{obstacle}{obstacle}}
+{\footnotesize\ttfamily \label{class_game10___board_ab2f53d77c45d55a6e9d69da8ee126126} 
+char Game10\+\_\+\+Board\+::obstacle = \textquotesingle{}\#\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obstacle symbol. 
+
+\Hypertarget{class_game10___board_ae985c7ebbaaf79788dce99ce8c01b3db}\index{Game10\_Board@{Game10\_Board}!round\_count@{round\_count}}
+\index{round\_count@{round\_count}!Game10\_Board@{Game10\_Board}}
+\doxysubsubsection{\texorpdfstring{round\_count}{round\_count}}
+{\footnotesize\ttfamily \label{class_game10___board_ae985c7ebbaaf79788dce99ce8c01b3db} 
+int Game10\+\_\+\+Board\+::round\+\_\+count = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Round counter. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_game10_8h}{Game10.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_game10_8cpp}{Game10.\+cpp}}\end{DoxyCompactItemize}

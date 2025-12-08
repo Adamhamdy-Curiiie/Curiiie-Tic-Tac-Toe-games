@@ -1,0 +1,109 @@
+\doxysection{Word\+Tic\+Tac\+Toe.\+h}
+\hypertarget{_word_tic_tac_toe_8h_source}{}\label{_word_tic_tac_toe_8h_source}\index{E:/xoooooo/inc/WordTicTacToe.h@{E:/xoooooo/inc/WordTicTacToe.h}}
+\mbox{\hyperlink{_word_tic_tac_toe_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ WORDTICTACTOE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ WORDTICTACTOE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_board_game___classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cctype>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <limits>}}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00034\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tic_tac_toe___board_a28bc1b40e88a726564e86c052b42c318}{WordTicTacToe\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<char>}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ set<string>\ \mbox{\hyperlink{class_word_tic_tac_toe___board_af72c83ecc32143c885a874649c346d58}{dictionary}};\ \ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_a08f0164f3892377685ac5db6377b8abb}{load\_dictionary}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_a0a4bc407e90f80192dc3325f546f7375}{is\_valid\_word}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ word);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_a46659622d728de6851e8baab4f5e1416}{check\_all\_directions}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{class_word_tic_tac_toe___board_a28bc1b40e88a726564e86c052b42c318}{WordTicTacToe\_Board}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_a318b5380bf0804798d3c7e64cd5abfb4}{\string~WordTicTacToe\_Board}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_aee856b67709f8e3db48ea59e90e97b87}{update\_board}}(\mbox{\hyperlink{class_move}{Move<char>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_a3d8bb94142742b99a2420011b4369fab}{is\_win}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_a24fdbe2bc70bcbc9a42045c683c3c2ed}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_a3e0ef585e102013d0c9ec43ab39ea87e}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_a38246d03269fe58b8e880f8da8cad47e}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keyword}{const}\ set<string>\&\ \mbox{\hyperlink{class_word_tic_tac_toe___board_af5b764ba4744d0a5e25906b3eae4e045}{get\_dictionary}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_word_tic_tac_toe___board_af72c83ecc32143c885a874649c346d58}{dictionary}};\ \}}
+\DoxyCodeLine{00125\ \};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00134\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00135\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tic_tac_toe___u_i_ab46ca28ffcf7aa8f895af427cc39b091}{WordTicTacToe\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<char>}
+\DoxyCodeLine{00136\ \{}
+\DoxyCodeLine{00137\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{class_word_tic_tac_toe___u_i_ab46ca28ffcf7aa8f895af427cc39b091}{WordTicTacToe\_UI}}();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00153\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_word_tic_tac_toe___u_i_a52f5d989aaf3bb437ba3746e95526cc4}{get\_move}}(\mbox{\hyperlink{class_player}{Player<char>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{class_player}{Player<char>}}**\ \mbox{\hyperlink{class_word_tic_tac_toe___u_i_aabab355ea0975e70adc70cc2c349bda3}{setup\_players}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00161\ \};}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00170\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00171\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tic_tac_toe___random_player_a9d1642fb1cb3f1fb604268191c65e4d0}{WordTicTacToe\_RandomPlayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}}<char>}
+\DoxyCodeLine{00172\ \{}
+\DoxyCodeLine{00173\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00180\ \ \ \ \ \mbox{\hyperlink{class_word_tic_tac_toe___random_player_a9d1642fb1cb3f1fb604268191c65e4d0}{WordTicTacToe\_RandomPlayer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}});}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00189\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_word_tic_tac_toe___random_player_a09c8080f23d02989e3d30e0b376d311a}{get\_random\_move}}();}
+\DoxyCodeLine{00190\ \};}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00199\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00200\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_word_tic_tac_toe___smart_player_abdd8d76a732dbcee805393bf3f9195b1}{WordTicTacToe\_SmartPlayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}}<char>}
+\DoxyCodeLine{00201\ \{}
+\DoxyCodeLine{00202\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_a80efaf774b4fccdae991aff66159e531}{evaluate\_board}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ board,\ \textcolor{keyword}{const}\ set<string>\&\ dictionary);}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00218\ \ \ \ \ vector<string>\ \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_a931b0833c469fda0bd31be07c5cbf93c}{find\_possible\_words}}(\textcolor{keyword}{const}\ vector<char>\&\ letters,\ \textcolor{keyword}{const}\ set<string>\&\ dictionary);}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_ab9ad40886696bea50304f698554cd219}{calculate\_move\_value}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ board,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ letter,\ \textcolor{keyword}{const}\ set<string>\&\ dictionary);}
+\DoxyCodeLine{00231\ }
+\DoxyCodeLine{00232\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00239\ \ \ \ \ \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_abdd8d76a732dbcee805393bf3f9195b1}{WordTicTacToe\_SmartPlayer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}},\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}});}
+\DoxyCodeLine{00240\ }
+\DoxyCodeLine{00247\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<char>}}*\ \mbox{\hyperlink{class_word_tic_tac_toe___smart_player_a362a9072a5e945a52a29557d613a8890}{get\_smart\_move}}();}
+\DoxyCodeLine{00248\ \};}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00254\ \textcolor{comment}{//\ ============================================}}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00262\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{_word_tic_tac_toe_8h_a9f2fe4e8508f5422eb49662be25f8f3b}{can\_win\_with\_move}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ board,\ \textcolor{keyword}{const}\ set<string>\&\ dictionary);}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00273\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_word_tic_tac_toe_8h_a44f0bbc7d63cd1a611cf8bf489c3c541}{evaluate\_blocking\_move}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ board,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ letter,\ \textcolor{keyword}{const}\ set<string>\&\ dictionary);}
+\DoxyCodeLine{00275\ }
+\DoxyCodeLine{00285\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_word_tic_tac_toe_8h_a2f8520e854590704b1885e9ce5f70e62}{calculate\_advanced\_move\_value}}(\textcolor{keyword}{const}\ vector<vector<char>>\&\ board,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ letter,\ \textcolor{keyword}{const}\ set<string>\&\ dictionary);}
+\DoxyCodeLine{00287\ }
+\DoxyCodeLine{00294\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_word_tic_tac_toe_8h_af952ca50f6ef64809d3d2f7c7148aa97}{evaluate\_sequence}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ seq,\ \textcolor{keyword}{const}\ set<string>\&\ dictionary);}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00296\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ WORDTICTACTOE\_H}}
+
+\end{DoxyCode}

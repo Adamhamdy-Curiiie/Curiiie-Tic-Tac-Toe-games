@@ -1,0 +1,129 @@
+\doxysection{Game10\+\_\+\+UI Class Reference}
+\hypertarget{class_game10___u_i}{}\label{class_game10___u_i}\index{Game10\_UI@{Game10\_UI}}
+
+
+User interface for the game.  
+
+
+
+
+{\ttfamily \#include $<$Game10.\+h$>$}
+
+Inheritance diagram for Game10\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game10___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game10___u_i_ac596079356a5645eca082e2783c98f54}{Game10\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Initializes \doxylink{class_u_i}{UI}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game10___u_i_a05702d68ca60c6614dc99ac8a3a14d19}{create\+\_\+player}} (string \&name, char symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Creates a player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game10___u_i_a8501ea299b0d8e07490766921ba577d7}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Gets move from player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User interface for the game. 
+
+\label{doc-constructors}
+\Hypertarget{class_game10___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game10___u_i_ac596079356a5645eca082e2783c98f54}\index{Game10\_UI@{Game10\_UI}!Game10\_UI@{Game10\_UI}}
+\index{Game10\_UI@{Game10\_UI}!Game10\_UI@{Game10\_UI}}
+\doxysubsubsection{\texorpdfstring{Game10\_UI()}{Game10\_UI()}}
+{\footnotesize\ttfamily \label{class_game10___u_i_ac596079356a5645eca082e2783c98f54} 
+Game10\+\_\+\+UI\+::\+Game10\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes \doxylink{class_u_i}{UI}. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_game10___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game10___u_i_a05702d68ca60c6614dc99ac8a3a14d19}\index{Game10\_UI@{Game10\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Game10\_UI@{Game10\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_game10___u_i_a05702d68ca60c6614dc99ac8a3a14d19} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Game10\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} symbol \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New player instance 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{UI$<$ char $>$}}.
+
+\Hypertarget{class_game10___u_i_a8501ea299b0d8e07490766921ba577d7}\index{Game10\_UI@{Game10\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Game10\_UI@{Game10\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_game10___u_i_a8501ea299b0d8e07490766921ba577d7} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Game10\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets move from player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The move 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_game10_8h}{Game10.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_game10_8cpp}{Game10.\+cpp}}\end{DoxyCompactItemize}

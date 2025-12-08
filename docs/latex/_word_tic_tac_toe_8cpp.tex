@@ -1,0 +1,138 @@
+\doxysection{E\+:/xoooooo/src/\+Word\+Tic\+Tac\+Toe.cpp File Reference}
+\hypertarget{_word_tic_tac_toe_8cpp}{}\label{_word_tic_tac_toe_8cpp}\index{E:/xoooooo/src/WordTicTacToe.cpp@{E:/xoooooo/src/WordTicTacToe.cpp}}
+
+
+Implementation of Word Tic-\/\+Tac-\/\+Toe game classes.  
+
+
+{\ttfamily \#include "{}Word\+Tic\+Tac\+Toe.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_word_tic_tac_toe_8cpp_a9f2fe4e8508f5422eb49662be25f8f3b}{can\+\_\+win\+\_\+with\+\_\+move}} (const vector$<$ vector$<$ char $>$ $>$ \&board, const set$<$ string $>$ \&dictionary)
+\begin{DoxyCompactList}\small\item\em Checks if a move leads to immediate win. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_word_tic_tac_toe_8cpp_a44f0bbc7d63cd1a611cf8bf489c3c541}{evaluate\+\_\+blocking\+\_\+move}} (const vector$<$ vector$<$ char $>$ $>$ \&board, int x, int y, char letter, const set$<$ string $>$ \&dictionary)
+\begin{DoxyCompactList}\small\item\em Evaluates if a move blocks opponent from forming words. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_word_tic_tac_toe_8cpp_a2f8520e854590704b1885e9ce5f70e62}{calculate\+\_\+advanced\+\_\+move\+\_\+value}} (const vector$<$ vector$<$ char $>$ $>$ \&board, int x, int y, char letter, const set$<$ string $>$ \&dictionary)
+\begin{DoxyCompactList}\small\item\em Advanced calculation of move value with deep analysis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_word_tic_tac_toe_8cpp_af952ca50f6ef64809d3d2f7c7148aa97}{evaluate\+\_\+sequence}} (const string \&seq, const set$<$ string $>$ \&dictionary)
+\begin{DoxyCompactList}\small\item\em Evaluates a sequence for word completion potential. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of Word Tic-\/\+Tac-\/\+Toe game classes. 
+
+Contains the complete implementation of the game board, \doxylink{class_u_i}{UI}, random player, and smart AI for Word Tic-\/\+Tac-\/\+Toe where players form valid dictionary words \begin{DoxyAuthor}{Author}
+Game Development Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+2.\+0 
+\end{DoxyVersion}
+
+
+\label{doc-func-members}
+\Hypertarget{_word_tic_tac_toe_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{_word_tic_tac_toe_8cpp_a2f8520e854590704b1885e9ce5f70e62}\index{WordTicTacToe.cpp@{WordTicTacToe.cpp}!calculate\_advanced\_move\_value@{calculate\_advanced\_move\_value}}
+\index{calculate\_advanced\_move\_value@{calculate\_advanced\_move\_value}!WordTicTacToe.cpp@{WordTicTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{calculate\_advanced\_move\_value()}{calculate\_advanced\_move\_value()}}
+{\footnotesize\ttfamily \label{_word_tic_tac_toe_8cpp_a2f8520e854590704b1885e9ce5f70e62} 
+int calculate\+\_\+advanced\+\_\+move\+\_\+value (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{letter}{, }\item[{const set$<$ string $>$ \&}]{dictionary}{}\end{DoxyParamCaption})}
+
+
+
+Advanced calculation of move value with deep analysis. 
+
+Advanced strategic evaluation of a move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Current board state \\
+\hline
+{\em x} & Row position \\
+\hline
+{\em y} & Column position \\
+\hline
+{\em letter} & Letter to place \\
+\hline
+{\em dictionary} & Reference to dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Strategic value score 
+\end{DoxyReturn}
+\Hypertarget{_word_tic_tac_toe_8cpp_a9f2fe4e8508f5422eb49662be25f8f3b}\index{WordTicTacToe.cpp@{WordTicTacToe.cpp}!can\_win\_with\_move@{can\_win\_with\_move}}
+\index{can\_win\_with\_move@{can\_win\_with\_move}!WordTicTacToe.cpp@{WordTicTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{can\_win\_with\_move()}{can\_win\_with\_move()}}
+{\footnotesize\ttfamily \label{_word_tic_tac_toe_8cpp_a9f2fe4e8508f5422eb49662be25f8f3b} 
+bool can\+\_\+win\+\_\+with\+\_\+move (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{const set$<$ string $>$ \&}]{dictionary}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a move leads to immediate win. 
+
+Helper functions for Smart AI.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Current board state \\
+\hline
+{\em dictionary} & Reference to dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if any valid word is formed, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{_word_tic_tac_toe_8cpp_a44f0bbc7d63cd1a611cf8bf489c3c541}\index{WordTicTacToe.cpp@{WordTicTacToe.cpp}!evaluate\_blocking\_move@{evaluate\_blocking\_move}}
+\index{evaluate\_blocking\_move@{evaluate\_blocking\_move}!WordTicTacToe.cpp@{WordTicTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{evaluate\_blocking\_move()}{evaluate\_blocking\_move()}}
+{\footnotesize\ttfamily \label{_word_tic_tac_toe_8cpp_a44f0bbc7d63cd1a611cf8bf489c3c541} 
+int evaluate\+\_\+blocking\+\_\+move (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{letter}{, }\item[{const set$<$ string $>$ \&}]{dictionary}{}\end{DoxyParamCaption})}
+
+
+
+Evaluates if a move blocks opponent from forming words. 
+
+Evaluates defensive value of a move.
+
+
+\begin{DoxyParams}{Parameters}
+{\em board} & Current board state \\
+\hline
+{\em x} & Row position \\
+\hline
+{\em y} & Column position \\
+\hline
+{\em letter} & Placed letter \\
+\hline
+{\em dictionary} & Reference to dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Score for blocking value (higher = better block) 
+\end{DoxyReturn}
+\Hypertarget{_word_tic_tac_toe_8cpp_af952ca50f6ef64809d3d2f7c7148aa97}\index{WordTicTacToe.cpp@{WordTicTacToe.cpp}!evaluate\_sequence@{evaluate\_sequence}}
+\index{evaluate\_sequence@{evaluate\_sequence}!WordTicTacToe.cpp@{WordTicTacToe.cpp}}
+\doxysubsubsection{\texorpdfstring{evaluate\_sequence()}{evaluate\_sequence()}}
+{\footnotesize\ttfamily \label{_word_tic_tac_toe_8cpp_af952ca50f6ef64809d3d2f7c7148aa97} 
+int evaluate\+\_\+sequence (\begin{DoxyParamCaption}\item[{const string \&}]{seq}{, }\item[{const set$<$ string $>$ \&}]{dictionary}{}\end{DoxyParamCaption})}
+
+
+
+Evaluates a sequence for word completion potential. 
+
+Evaluates word completion potential of a sequence.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seq} & Sequence with \textquotesingle{}?\textquotesingle{} for empty cells \\
+\hline
+{\em dictionary} & Reference to dictionary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Score based on word potential 
+\end{DoxyReturn}

@@ -1,0 +1,131 @@
+\doxysection{Game7\+\_\+\+UI Class Reference}
+\hypertarget{class_game7___u_i}{}\label{class_game7___u_i}\index{Game7\_UI@{Game7\_UI}}
+
+
+\doxylink{class_u_i}{UI} class for Game7.  
+
+
+
+
+{\ttfamily \#include $<$Game7.\+h$>$}
+
+Inheritance diagram for Game7\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game7___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game7___u_i_a8e4700bf34319fe28c0a47eb7853c6db}{Game7\+\_\+\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructor -\/ displays game title. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game7___u_i_a5815a5585ed55b84731fc4fb3a24bd95}{create\+\_\+player}} (string \&name, char symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Create a player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game7___u_i_a1bfc03812d6bae033dc3519a198140ce}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Get move from player through \doxylink{class_u_i}{UI}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const
+\begin{DoxyCompactList}\small\item\em Display the current board matrix in formatted form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_u_i}{UI} class for Game7. 
+
+Manages user interface, input/output, and game flow for the moving token game 
+
+\label{doc-constructors}
+\Hypertarget{class_game7___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game7___u_i_a8e4700bf34319fe28c0a47eb7853c6db}\index{Game7\_UI@{Game7\_UI}!Game7\_UI@{Game7\_UI}}
+\index{Game7\_UI@{Game7\_UI}!Game7\_UI@{Game7\_UI}}
+\doxysubsubsection{\texorpdfstring{Game7\_UI()}{Game7\_UI()}}
+{\footnotesize\ttfamily \label{class_game7___u_i_a8e4700bf34319fe28c0a47eb7853c6db} 
+Game7\+\_\+\+UI\+::\+Game7\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor -\/ displays game title. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_game7___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game7___u_i_a5815a5585ed55b84731fc4fb3a24bd95}\index{Game7\_UI@{Game7\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Game7\_UI@{Game7\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_game7___u_i_a5815a5585ed55b84731fc4fb3a24bd95} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Game7\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player} name \\
+\hline
+{\em symbol} & \doxylink{class_player}{Player} symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+{\em type} & \doxylink{class_player}{Player} type (HUMAN or COMPUTER) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to newly created \doxylink{class_game7___player}{Game7\+\_\+\+Player} 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{UI$<$ char $>$}}.
+
+\Hypertarget{class_game7___u_i_a1bfc03812d6bae033dc3519a198140ce}\index{Game7\_UI@{Game7\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Game7\_UI@{Game7\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_game7___u_i_a1bfc03812d6bae033dc3519a198140ce} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Game7\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get move from player through \doxylink{class_u_i}{UI}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to current player \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_game7___move}{Game7\+\_\+\+Move} object with player\textquotesingle{}s choice
+\end{DoxyReturn}
+For humans\+: prompts for source and destination positions For computers\+: uses Minimax AI to determine best move 
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_game7_8h}{Game7.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_game7_8cpp}{Game7.\+cpp}}\end{DoxyCompactItemize}

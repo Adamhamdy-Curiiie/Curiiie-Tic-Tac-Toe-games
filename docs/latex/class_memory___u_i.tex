@@ -1,0 +1,143 @@
+\doxysection{Memory\+\_\+\+UI Class Reference}
+\hypertarget{class_memory___u_i}{}\label{class_memory___u_i}\index{Memory\_UI@{Memory\_UI}}
+
+
+User Interface for the Memory Tic-\/\+Tac-\/\+Toe game.  
+
+
+
+
+{\ttfamily \#include $<$Memory\+\_\+\+Classes.\+h$>$}
+
+Inheritance diagram for Memory\+\_\+\+UI\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_memory___u_i}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_memory___u_i_a86e9d67bbb016aa6b49a61d4401d8ae4}{Memory\+\_\+\+UI}} ()
+\item 
+\mbox{\hyperlink{class_memory___u_i_a9081a7ca8792bf1f888951beea19b65a}{\texorpdfstring{$\sim$}{\string~}\+Memory\+\_\+\+UI}} ()
+\item 
+void \mbox{\hyperlink{class_memory___u_i_a358c7741b0819cdcfa16a6c4a837d0f8}{display\+\_\+board\+\_\+matrix}} (const vector$<$ vector$<$ char $>$ $>$ \&matrix) const override
+\begin{DoxyCompactList}\small\item\em Display board with hidden moves each round. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_memory___u_i_a056bb62e0e737269c29383c94e48e58a}{create\+\_\+player}} (string \&name, char symbol, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Create a player object based on input name, symbol, and type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_memory___u_i_a3e27165bf43524664d5bcd76e52910cb}{get\+\_\+move}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Ask the user (or AI) to make a move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}} (int cell\+\_\+display\+\_\+width=3)
+\begin{DoxyCompactList}\small\item\em Construct the \doxylink{class_u_i}{UI} and display a welcome message. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_u_i_a1012e508ff7df030714c62ddf6b261a7}{\texorpdfstring{$\sim$}{\string~}\+UI}} ()
+\item 
+virtual void \mbox{\hyperlink{class_u_i_aaad19c26b8e4c49ba7ada54abd83e23c}{display\+\_\+message}} (string message)
+\begin{DoxyCompactList}\small\item\em Display any message to the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_i_a6966a040c995b2292e5edddaa94f889a}{setup\+\_\+players}} ()
+\begin{DoxyCompactList}\small\item\em Set up players for the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_memory___u_i_ae5f2c6d9f7a22dfc8602f195d8376aed}{substitute}} = \textquotesingle{}\#\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual string \mbox{\hyperlink{class_u_i_a7b1603de1f73fbb4006e4f00a27c44da}{get\+\_\+player\+\_\+name}} (string player\+\_\+label)
+\begin{DoxyCompactList}\small\item\em Ask the user for the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_u_i_ac3d45fea2bbcaa0372d8e5101e116ca1}{get\+\_\+player\+\_\+type\+\_\+choice}} (string player\+\_\+label, const vector$<$ string $>$ \&options)
+\begin{DoxyCompactList}\small\item\em Ask the user to choose the player type from a list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_i}{UI$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_i_a6c79c489ae9aa3a7860fb58e5a14ddfe}{cell\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em Width of each displayed board cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User Interface for the Memory Tic-\/\+Tac-\/\+Toe game. 
+
+\label{doc-constructors}
+\Hypertarget{class_memory___u_i_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_memory___u_i_a86e9d67bbb016aa6b49a61d4401d8ae4}\index{Memory\_UI@{Memory\_UI}!Memory\_UI@{Memory\_UI}}
+\index{Memory\_UI@{Memory\_UI}!Memory\_UI@{Memory\_UI}}
+\doxysubsubsection{\texorpdfstring{Memory\_UI()}{Memory\_UI()}}
+{\footnotesize\ttfamily \label{class_memory___u_i_a86e9d67bbb016aa6b49a61d4401d8ae4} 
+Memory\+\_\+\+UI\+::\+Memory\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_memory___u_i_a9081a7ca8792bf1f888951beea19b65a}\index{Memory\_UI@{Memory\_UI}!````~Memory\_UI@{\texorpdfstring{$\sim$}{\string~}Memory\_UI}}
+\index{````~Memory\_UI@{\texorpdfstring{$\sim$}{\string~}Memory\_UI}!Memory\_UI@{Memory\_UI}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Memory\_UI()}{\string~Memory\_UI()}}
+{\footnotesize\ttfamily \label{class_memory___u_i_a9081a7ca8792bf1f888951beea19b65a} 
+Memory\+\_\+\+UI\+::\texorpdfstring{$\sim$}{\string~}\+Memory\+\_\+\+UI (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_memory___u_i_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_memory___u_i_a056bb62e0e737269c29383c94e48e58a}\index{Memory\_UI@{Memory\_UI}!create\_player@{create\_player}}
+\index{create\_player@{create\_player}!Memory\_UI@{Memory\_UI}}
+\doxysubsubsection{\texorpdfstring{create\_player()}{create\_player()}}
+{\footnotesize\ttfamily \label{class_memory___u_i_a056bb62e0e737269c29383c94e48e58a} 
+\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Memory\+\_\+\+UI\+::create\+\_\+player (\begin{DoxyParamCaption}\item[{string \&}]{name}{, }\item[{char}]{symbol}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Create a player object based on input name, symbol, and type. 
+
+Default implementation of creating two players. 
+
+Reimplemented from \mbox{\hyperlink{class_u_i_a94561e0bb4bbcbe5ff71ca6d751922df}{UI$<$ char $>$}}.
+
+\Hypertarget{class_memory___u_i_a358c7741b0819cdcfa16a6c4a837d0f8}\index{Memory\_UI@{Memory\_UI}!display\_board\_matrix@{display\_board\_matrix}}
+\index{display\_board\_matrix@{display\_board\_matrix}!Memory\_UI@{Memory\_UI}}
+\doxysubsubsection{\texorpdfstring{display\_board\_matrix()}{display\_board\_matrix()}}
+{\footnotesize\ttfamily \label{class_memory___u_i_a358c7741b0819cdcfa16a6c4a837d0f8} 
+void Memory\+\_\+\+UI\+::display\+\_\+board\+\_\+matrix (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{matrix}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Display board with hidden moves each round. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_i_aa3775124efaeac59935ae0afb354708d}{UI$<$ char $>$}}.
+
+\Hypertarget{class_memory___u_i_a3e27165bf43524664d5bcd76e52910cb}\index{Memory\_UI@{Memory\_UI}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!Memory\_UI@{Memory\_UI}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_memory___u_i_a3e27165bf43524664d5bcd76e52910cb} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Memory\+\_\+\+UI\+::get\+\_\+move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Ask the user (or AI) to make a move. 
+
+
+
+Implements \mbox{\hyperlink{class_u_i_a8befa259c38c57e6ae2e8ed81c476337}{UI$<$ char $>$}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_memory___u_i_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_memory___u_i_ae5f2c6d9f7a22dfc8602f195d8376aed}\index{Memory\_UI@{Memory\_UI}!substitute@{substitute}}
+\index{substitute@{substitute}!Memory\_UI@{Memory\_UI}}
+\doxysubsubsection{\texorpdfstring{substitute}{substitute}}
+{\footnotesize\ttfamily \label{class_memory___u_i_ae5f2c6d9f7a22dfc8602f195d8376aed} 
+char Memory\+\_\+\+UI\+::substitute = \textquotesingle{}\#\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_memory___classes_8h}{Memory\+\_\+\+Classes.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_memory___classes_8cpp}{Memory\+\_\+\+Classes.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,75 @@
+\doxysection{Ultimate\+Tic\+Tac\+Toe.\+h}
+\hypertarget{_ultimate_tic_tac_toe_8h_source}{}\label{_ultimate_tic_tac_toe_8h_source}\index{E:/xoooooo/inc/UltimateTicTacToe.h@{E:/xoooooo/inc/UltimateTicTacToe.h}}
+\mbox{\hyperlink{_ultimate_tic_tac_toe_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ULTIMATE\_TTT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ULTIMATE\_TTT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_board_game___classes_8h}{BoardGame\_Classes.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Forward\ declarations}}
+\DoxyCodeLine{00013\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___t_t_t___board}{Ultimate\_TTT\_Board}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___t_t_t___u_i}{Ultimate\_TTT\_UI}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___t_t_t___random___player}{Ultimate\_TTT\_Random\_Player}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___t_t_t___board_a5e3b5a5d2c0d86f66c61ed95e060bf29}{Ultimate\_TTT\_Board}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}}<T>\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ vector<vector<vector<T>>>\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a830efb559315549f732cd27754115bba}{sub\_boards}};\ \ }
+\DoxyCodeLine{00031\ \ \ \ \ vector<vector<T>>\ \mbox{\hyperlink{class_ultimate___t_t_t___board_ad47c58aca1ca0a8a0f1548447757537c}{main\_board}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ vector<vector<bool>>\ \mbox{\hyperlink{class_ultimate___t_t_t___board_ad17bc31d2afbdb822dcbd64dac165ac4}{sub\_board\_won}};\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a5290d4922702944f627fe1b77ee77cef}{active\_sub\_board\_x}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a2d1bc50c53e6f163940b4c77323c684d}{active\_sub\_board\_y}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a717365bcf72a20ae1f98ba75bed3a64e}{first\_move}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a5a9f3c61abf143f33e2480cea4e85237}{check\_win\_in\_grid}}(\textcolor{keyword}{const}\ vector<vector<T>>\&\ grid,\ T\ symbol);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a47222fce3ecb0b6a75a4dec24fc73455}{is\_sub\_board\_full}}(\textcolor{keywordtype}{int}\ sub\_x,\ \textcolor{keywordtype}{int}\ sub\_y);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a8df3013d353924fdefaeaabf2e145342}{update\_main\_board\_if\_won}}(\textcolor{keywordtype}{int}\ sub\_x,\ \textcolor{keywordtype}{int}\ sub\_y,\ T\ symbol);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_ultimate___t_t_t___board_a5e3b5a5d2c0d86f66c61ed95e060bf29}{Ultimate\_TTT\_Board}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a7b12af559459c9665ac33bb7502b2dcd}{update\_board}}(\mbox{\hyperlink{class_move}{Move<T>}}*\ move)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a63e4d01d91a2f51b2d03b260d5fb3792}{is\_win}}(\mbox{\hyperlink{class_player}{Player<T>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_ac416fcd56f68250bc2940096ac491d88}{is\_lose}}(\mbox{\hyperlink{class_player}{Player<T>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a181e3b4fd638896e95dbb55163ac562c}{is\_draw}}(\mbox{\hyperlink{class_player}{Player<T>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a83cef71ea70d0de994c1ea5b08d798fe}{game\_is\_over}}(\mbox{\hyperlink{class_player}{Player<T>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a0138e1d2b44535b0637abec9f4387a29}{get\_active\_sub\_board}}(\textcolor{keywordtype}{int}\&\ x,\ \textcolor{keywordtype}{int}\&\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a18a67bcf6a46e83f136774bd20055dde}{is\_sub\_board\_won\_at}}(\textcolor{keywordtype}{int}\ sub\_x,\ \textcolor{keywordtype}{int}\ sub\_y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00121\ \ \ \ \ vector<vector<T>>\ \mbox{\hyperlink{class_ultimate___t_t_t___board_a3b48893d970d0bd32b5c198ad49bf922}{get\_main\_board}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00122\ \};}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00132\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00133\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___t_t_t___u_i_adcb5ad1a611fb7788ff0f17f675a14f7}{Ultimate\_TTT\_UI}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_u_i_afb59b53f3c2ed750b1a9a0c7d6dc4a7a}{UI}}<T>\ \{}
+\DoxyCodeLine{00134\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{class_ultimate___t_t_t___u_i_adcb5ad1a611fb7788ff0f17f675a14f7}{Ultimate\_TTT\_UI}}();}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ultimate___t_t_t___u_i_a4a1bdc06e06196bec1b9d07fc2f32153}{display\_board\_matrix}}(\textcolor{keyword}{const}\ vector<vector<T>>\&\ matrix)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00151\ \ \ \ \ \mbox{\hyperlink{class_move}{Move<T>}}*\ \mbox{\hyperlink{class_ultimate___t_t_t___u_i_a29acbcf20021abbd9872ade354fd3701}{get\_move}}(\mbox{\hyperlink{class_player}{Player<T>}}*\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00152\ \};}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00162\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00163\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ultimate___t_t_t___random___player_a50303375452dc1a8ffcb7e24d78f8e93}{Ultimate\_TTT\_Random\_Player}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}}<T>\ \{}
+\DoxyCodeLine{00164\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00169\ \ \ \ \ \mbox{\hyperlink{class_ultimate___t_t_t___random___player_a50303375452dc1a8ffcb7e24d78f8e93}{Ultimate\_TTT\_Random\_Player}}(T\ \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}});}
+\DoxyCodeLine{00170\ \};}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

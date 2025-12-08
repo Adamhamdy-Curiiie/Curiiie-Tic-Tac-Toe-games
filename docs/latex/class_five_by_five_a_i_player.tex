@@ -1,0 +1,166 @@
+\doxysection{Five\+By\+Five\+AIPlayer Class Reference}
+\hypertarget{class_five_by_five_a_i_player}{}\label{class_five_by_five_a_i_player}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+
+
+Smart AI player using Minimax algorithm with Alpha-\/\+Beta pruning.  
+
+
+Inheritance diagram for Five\+By\+Five\+AIPlayer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_five_by_five_a_i_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_five_by_five_a_i_player_a34ce112c995859616a221351a7f810ed}{Five\+By\+Five\+AIPlayer}} (string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}, char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}})
+\begin{DoxyCompactList}\small\item\em Constructor for AI player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_five_by_five_a_i_player_abe37d590f19044a946c446da33c77547}{get\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Get the AI\textquotesingle{}s next move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, char s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_five_by_five_a_i_player_a3a8bb968247f3c6725835da162c2a9cd}{count\+\_\+patterns}} (const vector$<$ vector$<$ char $>$ $>$ \&board, char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}})
+\begin{DoxyCompactList}\small\item\em Count all three-\/in-\/a-\/row patterns for a given symbol. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_five_by_five_a_i_player_a0885657ab9d69d29df3ed7ff548f8074}{evaluate\+\_\+board}} (const vector$<$ vector$<$ char $>$ $>$ \&board, char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}})
+\begin{DoxyCompactList}\small\item\em Evaluate board position. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_five_by_five_a_i_player_acc38ef43af48b0583b6e3af5849a52fc}{get\+\_\+empty\+\_\+cells}} (const vector$<$ vector$<$ char $>$ $>$ \&board)
+\begin{DoxyCompactList}\small\item\em Get all empty cells on the board. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_five_by_five_a_i_player_a566955cb6af283bff5bf4acb70c5cf92}{minimax}} (vector$<$ vector$<$ char $>$ $>$ board, int depth, int alpha, int beta, bool is\+\_\+maximizing, int moves\+\_\+made)
+\begin{DoxyCompactList}\small\item\em Minimax algorithm with Alpha-\/\+Beta pruning. \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ \mbox{\hyperlink{class_five_by_five_a_i_player_a2595305f8caeea4959e6d6f695be83eb}{find\+\_\+best\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Find the best move using Minimax. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{class_five_by_five_a_i_player_acdff2ad8b82df345245e8c9e81eaed22}{MAX\+\_\+\+DEPTH}} = 3
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Smart AI player using Minimax algorithm with Alpha-\/\+Beta pruning. 
+
+\label{doc-constructors}
+\Hypertarget{class_five_by_five_a_i_player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_five_by_five_a_i_player_a34ce112c995859616a221351a7f810ed}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\doxysubsubsection{\texorpdfstring{FiveByFiveAIPlayer()}{FiveByFiveAIPlayer()}}
+{\footnotesize\ttfamily \label{class_five_by_five_a_i_player_a34ce112c995859616a221351a7f810ed} 
+Five\+By\+Five\+AIPlayer\+::\+Five\+By\+Five\+AIPlayer (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{char}]{symbol}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for AI player. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_five_by_five_a_i_player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_five_by_five_a_i_player_a3a8bb968247f3c6725835da162c2a9cd}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!count\_patterns@{count\_patterns}}
+\index{count\_patterns@{count\_patterns}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\doxysubsubsection{\texorpdfstring{count\_patterns()}{count\_patterns()}}
+{\footnotesize\ttfamily \label{class_five_by_five_a_i_player_a3a8bb968247f3c6725835da162c2a9cd} 
+int Five\+By\+Five\+AIPlayer\+::count\+\_\+patterns (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{char}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Count all three-\/in-\/a-\/row patterns for a given symbol. 
+
+\Hypertarget{class_five_by_five_a_i_player_a0885657ab9d69d29df3ed7ff548f8074}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!evaluate\_board@{evaluate\_board}}
+\index{evaluate\_board@{evaluate\_board}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\doxysubsubsection{\texorpdfstring{evaluate\_board()}{evaluate\_board()}}
+{\footnotesize\ttfamily \label{class_five_by_five_a_i_player_a0885657ab9d69d29df3ed7ff548f8074} 
+int Five\+By\+Five\+AIPlayer\+::evaluate\+\_\+board (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{, }\item[{char}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Evaluate board position. 
+
+\Hypertarget{class_five_by_five_a_i_player_a2595305f8caeea4959e6d6f695be83eb}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!find\_best\_move@{find\_best\_move}}
+\index{find\_best\_move@{find\_best\_move}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\doxysubsubsection{\texorpdfstring{find\_best\_move()}{find\_best\_move()}}
+{\footnotesize\ttfamily \label{class_five_by_five_a_i_player_a2595305f8caeea4959e6d6f695be83eb} 
+pair$<$ int, int $>$ Five\+By\+Five\+AIPlayer\+::find\+\_\+best\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Find the best move using Minimax. 
+
+\Hypertarget{class_five_by_five_a_i_player_acc38ef43af48b0583b6e3af5849a52fc}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!get\_empty\_cells@{get\_empty\_cells}}
+\index{get\_empty\_cells@{get\_empty\_cells}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_empty\_cells()}{get\_empty\_cells()}}
+{\footnotesize\ttfamily \label{class_five_by_five_a_i_player_acc38ef43af48b0583b6e3af5849a52fc} 
+vector$<$ pair$<$ int, int $>$ $>$ Five\+By\+Five\+AIPlayer\+::get\+\_\+empty\+\_\+cells (\begin{DoxyParamCaption}\item[{const vector$<$ vector$<$ char $>$ $>$ \&}]{board}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Get all empty cells on the board. 
+
+\Hypertarget{class_five_by_five_a_i_player_abe37d590f19044a946c446da33c77547}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!get\_move@{get\_move}}
+\index{get\_move@{get\_move}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\doxysubsubsection{\texorpdfstring{get\_move()}{get\_move()}}
+{\footnotesize\ttfamily \label{class_five_by_five_a_i_player_abe37d590f19044a946c446da33c77547} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} Five\+By\+Five\+AIPlayer\+::get\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the AI\textquotesingle{}s next move. 
+
+\Hypertarget{class_five_by_five_a_i_player_a566955cb6af283bff5bf4acb70c5cf92}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!minimax@{minimax}}
+\index{minimax@{minimax}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\doxysubsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily \label{class_five_by_five_a_i_player_a566955cb6af283bff5bf4acb70c5cf92} 
+int Five\+By\+Five\+AIPlayer\+::minimax (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ char $>$ $>$}]{board}{, }\item[{int}]{depth}{, }\item[{int}]{alpha}{, }\item[{int}]{beta}{, }\item[{bool}]{is\+\_\+maximizing}{, }\item[{int}]{moves\+\_\+made}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Minimax algorithm with Alpha-\/\+Beta pruning. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_five_by_five_a_i_player_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_five_by_five_a_i_player_acdff2ad8b82df345245e8c9e81eaed22}\index{FiveByFiveAIPlayer@{FiveByFiveAIPlayer}!MAX\_DEPTH@{MAX\_DEPTH}}
+\index{MAX\_DEPTH@{MAX\_DEPTH}!FiveByFiveAIPlayer@{FiveByFiveAIPlayer}}
+\doxysubsubsection{\texorpdfstring{MAX\_DEPTH}{MAX\_DEPTH}}
+{\footnotesize\ttfamily \label{class_five_by_five_a_i_player_acdff2ad8b82df345245e8c9e81eaed22} 
+const int Five\+By\+Five\+AIPlayer\+::\+MAX\+\_\+\+DEPTH = 3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_game__3_8cpp}{Game\+\_\+3.\+cpp}}\end{DoxyCompactItemize}

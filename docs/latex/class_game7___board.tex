@@ -1,0 +1,293 @@
+\doxysection{Game7\+\_\+\+Board Class Reference}
+\hypertarget{class_game7___board}{}\label{class_game7___board}\index{Game7\_Board@{Game7\_Board}}
+
+
+\doxylink{class_board}{Board} class for 4x4 moving token Tic-\/\+Tac-\/\+Toe.  
+
+
+
+
+{\ttfamily \#include $<$Game7.\+h$>$}
+
+Inheritance diagram for Game7\+\_\+\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game7___board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game7___board_aafc6b1c6d3ae38d75cbc1b12a183c215}{Game7\+\_\+\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Constructor -\/ initializes 4x4 board with starting positions. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game7___board_a4e3fda170b5c871eca4b6e6ceeec414a}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Update board with a move. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game7___board_a645a580255b84daa807ee6641c567a7c}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if player has won. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game7___board_ace9405a1815af0f14608e9c3cb8485fc}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game7___board_a4610f9421f9ca69cb9d1de7b4c66e2a0}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if game is a draw. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game7___board_acb23edce619dea117465d6c68731c5f0}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if game is over. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_game7___move}{Game7\+\_\+\+Move}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_game7___board_a2d4a7727acc322eba2224c616e8adb8d}{get\+\_\+best\+\_\+move}} (char ai\+\_\+symbol, int difficulty=5)
+\begin{DoxyCompactList}\small\item\em Get best move using Minimax algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_game7___board_abede05ae0f797575e0910621aab6d463}{minimax}} (char current\+\_\+player, char ai\+\_\+symbol, int depth, int max\+\_\+depth, int alpha, int beta)
+\begin{DoxyCompactList}\small\item\em Minimax algorithm with Alpha-\/\+Beta Pruning. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game7___board_aa91010662480d67e97973039e4c5b1ea}{check\+\_\+win\+\_\+for\+\_\+symbol}} (char symbol)
+\begin{DoxyCompactList}\small\item\em Helper to check win for a specific symbol. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_game7___board_a59777aba3993c181e6d73a9cff46f376}{blank}} = \textquotesingle{}.\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_board}{Board} class for 4x4 moving token Tic-\/\+Tac-\/\+Toe. 
+
+Manages a 4x4 board where players move their tokens to adjacent cells. Initial setup\+: Row 0 = O X O X, Row 3 = X O X O, middle rows empty. Win by forming 3 in a row horizontally, vertically, or diagonally. Includes Minimax AI with Alpha-\/\+Beta pruning for computer players. 
+
+\label{doc-constructors}
+\Hypertarget{class_game7___board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game7___board_aafc6b1c6d3ae38d75cbc1b12a183c215}\index{Game7\_Board@{Game7\_Board}!Game7\_Board@{Game7\_Board}}
+\index{Game7\_Board@{Game7\_Board}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{Game7\_Board()}{Game7\_Board()}}
+{\footnotesize\ttfamily \label{class_game7___board_aafc6b1c6d3ae38d75cbc1b12a183c215} 
+Game7\+\_\+\+Board\+::\+Game7\+\_\+\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor -\/ initializes 4x4 board with starting positions. 
+
+Sets up board with alternating patterns\+: Row 0\+: O X O X Row 1-\/2\+: empty (blank) Row 3\+: X O X O 
+
+\label{doc-func-members}
+\Hypertarget{class_game7___board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game7___board_aa91010662480d67e97973039e4c5b1ea}\index{Game7\_Board@{Game7\_Board}!check\_win\_for\_symbol@{check\_win\_for\_symbol}}
+\index{check\_win\_for\_symbol@{check\_win\_for\_symbol}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{check\_win\_for\_symbol()}{check\_win\_for\_symbol()}}
+{\footnotesize\ttfamily \label{class_game7___board_aa91010662480d67e97973039e4c5b1ea} 
+bool Game7\+\_\+\+Board\+::check\+\_\+win\+\_\+for\+\_\+symbol (\begin{DoxyParamCaption}\item[{char}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Helper to check win for a specific symbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symbol} & The symbol to check (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if symbol forms 3 in a row (any direction)
+\end{DoxyReturn}
+Checks all horizontal, vertical, and diagonal lines \Hypertarget{class_game7___board_acb23edce619dea117465d6c68731c5f0}\index{Game7\_Board@{Game7\_Board}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_game7___board_acb23edce619dea117465d6c68731c5f0} 
+bool Game7\+\_\+\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if game is over. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if player has won 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_game7___board_a2d4a7727acc322eba2224c616e8adb8d}\index{Game7\_Board@{Game7\_Board}!get\_best\_move@{get\_best\_move}}
+\index{get\_best\_move@{get\_best\_move}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{get\_best\_move()}{get\_best\_move()}}
+{\footnotesize\ttfamily \label{class_game7___board_a2d4a7727acc322eba2224c616e8adb8d} 
+\mbox{\hyperlink{class_game7___move}{Game7\+\_\+\+Move}} \texorpdfstring{$\ast$}{*} Game7\+\_\+\+Board\+::get\+\_\+best\+\_\+move (\begin{DoxyParamCaption}\item[{char}]{ai\+\_\+symbol}{, }\item[{int}]{difficulty}{ = {\ttfamily 5}}\end{DoxyParamCaption})}
+
+
+
+Get best move using Minimax algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ai\+\_\+symbol} & Symbol of the AI player (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+{\em difficulty} & Search depth (higher = smarter but slower) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to \doxylink{class_game7___move}{Game7\+\_\+\+Move} with optimal move
+\end{DoxyReturn}
+Uses Alpha-\/\+Beta pruning for efficiency. Default difficulty is 5. Returns nullptr if no valid moves available. \Hypertarget{class_game7___board_a4610f9421f9ca69cb9d1de7b4c66e2a0}\index{Game7\_Board@{Game7\_Board}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_game7___board_a4610f9421f9ca69cb9d1de7b4c66e2a0} 
+bool Game7\+\_\+\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if game is a draw. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player (unused) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always false (game continues until someone wins) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_game7___board_ace9405a1815af0f14608e9c3cb8485fc}\index{Game7\_Board@{Game7\_Board}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_game7___board_ace9405a1815af0f14608e9c3cb8485fc} 
+bool Game7\+\_\+\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if player has lost. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player (unused) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always false (no lose condition separate from opponent win) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_game7___board_a645a580255b84daa807ee6641c567a7c}\index{Game7\_Board@{Game7\_Board}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_game7___board_a645a580255b84daa807ee6641c567a7c} 
+bool Game7\+\_\+\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if player has won. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Pointer to player to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if player has 3 in a row (horizontal, vertical, or diagonal) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_game7___board_abede05ae0f797575e0910621aab6d463}\index{Game7\_Board@{Game7\_Board}!minimax@{minimax}}
+\index{minimax@{minimax}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{minimax()}{minimax()}}
+{\footnotesize\ttfamily \label{class_game7___board_abede05ae0f797575e0910621aab6d463} 
+int Game7\+\_\+\+Board\+::minimax (\begin{DoxyParamCaption}\item[{char}]{current\+\_\+player}{, }\item[{char}]{ai\+\_\+symbol}{, }\item[{int}]{depth}{, }\item[{int}]{max\+\_\+depth}{, }\item[{int}]{alpha}{, }\item[{int}]{beta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Minimax algorithm with Alpha-\/\+Beta Pruning. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+\_\+player} & Symbol of player making the current move \\
+\hline
+{\em ai\+\_\+symbol} & Symbol of the AI player \\
+\hline
+{\em depth} & Current depth in the search tree \\
+\hline
+{\em max\+\_\+depth} & Maximum depth to search \\
+\hline
+{\em alpha} & Best score the maximizer can guarantee \\
+\hline
+{\em beta} & Best score the minimizer can guarantee \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Evaluation score for the current position
+\end{DoxyReturn}
+Recursively evaluates moves, pruning branches that cannot affect the final decision to improve performance. \Hypertarget{class_game7___board_a4e3fda170b5c871eca4b6e6ceeec414a}\index{Game7\_Board@{Game7\_Board}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_game7___board_a4e3fda170b5c871eca4b6e6ceeec414a} 
+bool Game7\+\_\+\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update board with a move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & Pointer to \doxylink{class_game7___move}{Game7\+\_\+\+Move} containing source and destination \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if move is valid and applied, false otherwise
+\end{DoxyReturn}
+Validates\+: bounds, source has player\textquotesingle{}s symbol, destination is empty, move is to adjacent cell (Manhattan distance = 1) 
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_game7___board_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game7___board_a59777aba3993c181e6d73a9cff46f376}\index{Game7\_Board@{Game7\_Board}!blank@{blank}}
+\index{blank@{blank}!Game7\_Board@{Game7\_Board}}
+\doxysubsubsection{\texorpdfstring{blank}{blank}}
+{\footnotesize\ttfamily \label{class_game7___board_a59777aba3993c181e6d73a9cff46f376} 
+char Game7\+\_\+\+Board\+::blank = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_game7_8h}{Game7.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_game7_8cpp}{Game7.\+cpp}}\end{DoxyCompactItemize}

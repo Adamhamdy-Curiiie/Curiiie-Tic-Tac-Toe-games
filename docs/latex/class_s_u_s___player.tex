@@ -1,0 +1,172 @@
+\doxysection{SUS\+\_\+\+Player Class Reference}
+\hypertarget{class_s_u_s___player}{}\label{class_s_u_s___player}\index{SUS\_Player@{SUS\_Player}}
+
+
+Represents a player in the SUS game.  
+
+
+
+
+{\ttfamily \#include $<$SUS\+\_\+\+Game.\+h$>$}
+
+Inheritance diagram for SUS\+\_\+\+Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_u_s___player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_s_u_s___player_aec14ab026e01765378cf5928552ba041}{SUS\+\_\+\+Player}} (string n, char s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a SUS player. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_s_u_s___player_a6b505c28c140db343fde73b99379da74}{get\+\_\+random\+\_\+move}} ()
+\begin{DoxyCompactList}\small\item\em Generate a random valid move for computer player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_u_s___player_aa43740f75c670a089ffe2e9a4e42493a}{set\+\_\+chosen\+\_\+letter}} (char letter)
+\begin{DoxyCompactList}\small\item\em Set the letter to be placed in the next move. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_s_u_s___player_afba86273fb0494d06ac2c59710bde246}{get\+\_\+chosen\+\_\+letter}} () const
+\begin{DoxyCompactList}\small\item\em Get the currently chosen letter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_adb4e803a7ac0356b111b8ca79d766976}{Player}} (string n, char s, \mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} t)
+\begin{DoxyCompactList}\small\item\em Construct a player with name, symbol, and type. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_player_aac1f2ab2a8e2aa0336d302c16068020e}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()
+\item 
+string \mbox{\hyperlink{class_player_aed2af19790ba73190e3ebeea589518e1}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a2df3bd299bf7aecfa2275ec6902a60f8}{get\+\_\+type}} () const
+\begin{DoxyCompactList}\small\item\em Get player type (e.\+g., \textquotesingle{}H\textquotesingle{} or \textquotesingle{}C\textquotesingle{}). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_af56f0bf98c0423a3a75b0848607d03a4}{get\+\_\+symbol}} () const
+\begin{DoxyCompactList}\small\item\em Get the player\textquotesingle{}s symbol. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a508617eddfae8915d098102d480fc888}{get\+\_\+board\+\_\+ptr}} () const
+\begin{DoxyCompactList}\small\item\em Get a pointer to the game board. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3617a3ad0db435176a06948065f9a3a6}{set\+\_\+board\+\_\+ptr}} (\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*}b)
+\begin{DoxyCompactList}\small\item\em Assign the board pointer for the player. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_s_u_s___player_aecc7295d6dcd2b7dd7afbc56b3fd8485}{get\+\_\+valid\+\_\+moves}} ()
+\begin{DoxyCompactList}\small\item\em Get all valid move positions on the board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_s_u_s___player_ad32f5829688e84e38b51ef94d7f7f123}{chosen\+\_\+letter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_player}{Player$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_player_af0ad0d4ca8584d23a98c723cd703a4f6}{name}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} name. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}} \mbox{\hyperlink{class_player_a81a15b1b507fd5f2157fb15bf0fd283f}{type}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_player}{Player} type (e.\+g., HUMAN or COMPUTER). \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_player_a272d6c4dab769930d4f8074918e7708a}{symbol}}
+\begin{DoxyCompactList}\small\item\em Player’s symbol on board. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_board}{Board}}$<$ char $>$ \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_player_a26249e756f850b6585267bfbc928ac79}{board\+Ptr}}
+\begin{DoxyCompactList}\small\item\em Pointer to the game board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a player in the SUS game. 
+
+Handles player moves including choosing which letter (S or U) to place 
+
+\label{doc-constructors}
+\Hypertarget{class_s_u_s___player_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_u_s___player_aec14ab026e01765378cf5928552ba041}\index{SUS\_Player@{SUS\_Player}!SUS\_Player@{SUS\_Player}}
+\index{SUS\_Player@{SUS\_Player}!SUS\_Player@{SUS\_Player}}
+\doxysubsubsection{\texorpdfstring{SUS\_Player()}{SUS\_Player()}}
+{\footnotesize\ttfamily \label{class_s_u_s___player_aec14ab026e01765378cf5928552ba041} 
+SUS\+\_\+\+Player\+::\+SUS\+\_\+\+Player (\begin{DoxyParamCaption}\item[{string}]{n}{, }\item[{char}]{s}{, }\item[{\mbox{\hyperlink{_board_game___classes_8h_abe590f3c9109f404f003d5d7e4f0fccf}{Player\+Type}}}]{t}{}\end{DoxyParamCaption})}
+
+
+
+Construct a SUS player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & \doxylink{class_player}{Player} name \\
+\hline
+{\em s} & \doxylink{class_player}{Player} symbol (\textquotesingle{}X\textquotesingle{} or \textquotesingle{}O\textquotesingle{}) \\
+\hline
+{\em t} & \doxylink{class_player}{Player} type (HUMAN or COMPUTER) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_s_u_s___player_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_u_s___player_afba86273fb0494d06ac2c59710bde246}\index{SUS\_Player@{SUS\_Player}!get\_chosen\_letter@{get\_chosen\_letter}}
+\index{get\_chosen\_letter@{get\_chosen\_letter}!SUS\_Player@{SUS\_Player}}
+\doxysubsubsection{\texorpdfstring{get\_chosen\_letter()}{get\_chosen\_letter()}}
+{\footnotesize\ttfamily \label{class_s_u_s___player_afba86273fb0494d06ac2c59710bde246} 
+char SUS\+\_\+\+Player\+::get\+\_\+chosen\+\_\+letter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the currently chosen letter. 
+
+\begin{DoxyReturn}{Returns}
+The letter chosen for placement 
+\end{DoxyReturn}
+\Hypertarget{class_s_u_s___player_a6b505c28c140db343fde73b99379da74}\index{SUS\_Player@{SUS\_Player}!get\_random\_move@{get\_random\_move}}
+\index{get\_random\_move@{get\_random\_move}!SUS\_Player@{SUS\_Player}}
+\doxysubsubsection{\texorpdfstring{get\_random\_move()}{get\_random\_move()}}
+{\footnotesize\ttfamily \label{class_s_u_s___player_a6b505c28c140db343fde73b99379da74} 
+\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} SUS\+\_\+\+Player\+::get\+\_\+random\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generate a random valid move for computer player. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a randomly selected \doxylink{class_move}{Move} object 
+\end{DoxyReturn}
+\Hypertarget{class_s_u_s___player_aecc7295d6dcd2b7dd7afbc56b3fd8485}\index{SUS\_Player@{SUS\_Player}!get\_valid\_moves@{get\_valid\_moves}}
+\index{get\_valid\_moves@{get\_valid\_moves}!SUS\_Player@{SUS\_Player}}
+\doxysubsubsection{\texorpdfstring{get\_valid\_moves()}{get\_valid\_moves()}}
+{\footnotesize\ttfamily \label{class_s_u_s___player_aecc7295d6dcd2b7dd7afbc56b3fd8485} 
+vector$<$ \mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*} $>$ SUS\+\_\+\+Player\+::get\+\_\+valid\+\_\+moves (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get all valid move positions on the board. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pointers to valid \doxylink{class_move}{Move} objects 
+\end{DoxyReturn}
+\Hypertarget{class_s_u_s___player_aa43740f75c670a089ffe2e9a4e42493a}\index{SUS\_Player@{SUS\_Player}!set\_chosen\_letter@{set\_chosen\_letter}}
+\index{set\_chosen\_letter@{set\_chosen\_letter}!SUS\_Player@{SUS\_Player}}
+\doxysubsubsection{\texorpdfstring{set\_chosen\_letter()}{set\_chosen\_letter()}}
+{\footnotesize\ttfamily \label{class_s_u_s___player_aa43740f75c670a089ffe2e9a4e42493a} 
+void SUS\+\_\+\+Player\+::set\+\_\+chosen\+\_\+letter (\begin{DoxyParamCaption}\item[{char}]{letter}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the letter to be placed in the next move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em letter} & The letter to place (\textquotesingle{}S\textquotesingle{} or \textquotesingle{}U\textquotesingle{}) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_s_u_s___player_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_s_u_s___player_ad32f5829688e84e38b51ef94d7f7f123}\index{SUS\_Player@{SUS\_Player}!chosen\_letter@{chosen\_letter}}
+\index{chosen\_letter@{chosen\_letter}!SUS\_Player@{SUS\_Player}}
+\doxysubsubsection{\texorpdfstring{chosen\_letter}{chosen\_letter}}
+{\footnotesize\ttfamily \label{class_s_u_s___player_ad32f5829688e84e38b51ef94d7f7f123} 
+char SUS\+\_\+\+Player\+::chosen\+\_\+letter\hspace{0.3cm}{\ttfamily [private]}}
+
+The letter chosen for the current move 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_s_u_s___game_8h}{SUS\+\_\+\+Game.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_s_u_s___game_8cpp}{SUS\+\_\+\+Game.\+cpp}}\end{DoxyCompactItemize}

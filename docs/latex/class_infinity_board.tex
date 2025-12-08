@@ -1,0 +1,207 @@
+\doxysection{Infinity\+Board Class Reference}
+\hypertarget{class_infinity_board}{}\label{class_infinity_board}\index{InfinityBoard@{InfinityBoard}}
+
+
+3x3 board where the oldest move vanishes every 3 turns  
+
+
+
+
+{\ttfamily \#include $<$Infinity\+Tic\+Tac\+Toe.\+h$>$}
+
+Inheritance diagram for Infinity\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_infinity_board}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_infinity_board_aa3b665c141cec06362bfceb65252f5e5}{Infinity\+Board}} ()
+\item 
+bool \mbox{\hyperlink{class_infinity_board_aa0816a7f3585c5751b8a8b45f553f5c7}{update\+\_\+board}} (\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}move) override
+\begin{DoxyCompactList}\small\item\em Apply move and remove oldest if 3 moves have passed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity_board_ad2482747c6256e6ea8323dbaa38d57e2}{is\+\_\+win}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if player has 3 in a row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity_board_ae4660420b8fa9db56922b35dc9b6c100}{is\+\_\+lose}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if a player has lost. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity_board_aab6c22ff9b75cf12e07132b1f6f9b67e}{is\+\_\+draw}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Always false (game continues indefinitely). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_infinity_board_a39e37781147bfe29015b8d80f88e5103}{game\+\_\+is\+\_\+over}} (\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}player) override
+\begin{DoxyCompactList}\small\item\em Check if the game is over. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_ae5dfded241ee3644196e2f6074d1d0b1}{Board}} (int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}, int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}})
+\begin{DoxyCompactList}\small\item\em Construct a board with given dimensions. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_board_a138a6378af669dd1ce55dc11217aea48}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. Frees allocated board memory. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_a117f2e61fdb7deccca333bbbc9c62d3a}{get\+\_\+board\+\_\+matrix}} () const
+\begin{DoxyCompactList}\small\item\em Return a copy of the current board as a 2D vector. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a93b130eff67bd4476fab27be8341cb78}{get\+\_\+rows}} () const
+\begin{DoxyCompactList}\small\item\em Get number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_ac665e1ed1f49125fab248e2c9ddfd608}{get\+\_\+columns}} () const
+\begin{DoxyCompactList}\small\item\em Get number of columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a512d0bd8c282985c410d677c82eb3b78}{get\+\_\+n\+\_\+moves}} () const
+\begin{DoxyCompactList}\small\item\em Get number of moves. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_board_a93558c58e60ca4291c6044828afd260b}{get\+\_\+cell}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Return content of cell x, y in current board. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_infinity_board_a98b31a46538a2d9dbf424c845c18710e}{remove\+\_\+oldest\+\_\+move}} ()
+\item 
+bool \mbox{\hyperlink{class_infinity_board_a8153e7dc8a5bccc5f30dc49ef2184c91}{check\+\_\+win\+\_\+for\+\_\+symbol}} (char symbol)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_infinity_board_a40b88a69bcbd22971779892addbf766e}{blank}} = \textquotesingle{}.\textquotesingle{}
+\item 
+queue$<$ pair$<$ int, int $>$ $>$ \mbox{\hyperlink{class_infinity_board_ab776e14cedd4e5f797489991eca0624d}{move\+\_\+history}}
+\item 
+int \mbox{\hyperlink{class_infinity_board_a3895095435ee420cbe1f74971ce68ee5}{move\+\_\+counter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_board}{Board$<$ char $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_board_a948d978e3b5fc460559b588f5dee9572}{rows}}
+\begin{DoxyCompactList}\small\item\em Number of rows. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_afaf8842d9d52ac724e8c2f5642ecafc7}{columns}}
+\begin{DoxyCompactList}\small\item\em Number of columns. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ char $>$ $>$ \mbox{\hyperlink{class_board_af00c1fc363eb640ca276b8a572040040}{board}}
+\begin{DoxyCompactList}\small\item\em 2D vector for the board \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_board_a5952baefabced65fecec333de638408d}{n\+\_\+moves}}
+\begin{DoxyCompactList}\small\item\em Number of moves made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+3x3 board where the oldest move vanishes every 3 turns 
+
+\label{doc-constructors}
+\Hypertarget{class_infinity_board_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_infinity_board_aa3b665c141cec06362bfceb65252f5e5}\index{InfinityBoard@{InfinityBoard}!InfinityBoard@{InfinityBoard}}
+\index{InfinityBoard@{InfinityBoard}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{InfinityBoard()}{InfinityBoard()}}
+{\footnotesize\ttfamily \label{class_infinity_board_aa3b665c141cec06362bfceb65252f5e5} 
+Infinity\+Board\+::\+Infinity\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_infinity_board_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_infinity_board_a8153e7dc8a5bccc5f30dc49ef2184c91}\index{InfinityBoard@{InfinityBoard}!check\_win\_for\_symbol@{check\_win\_for\_symbol}}
+\index{check\_win\_for\_symbol@{check\_win\_for\_symbol}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{check\_win\_for\_symbol()}{check\_win\_for\_symbol()}}
+{\footnotesize\ttfamily \label{class_infinity_board_a8153e7dc8a5bccc5f30dc49ef2184c91} 
+bool Infinity\+Board\+::check\+\_\+win\+\_\+for\+\_\+symbol (\begin{DoxyParamCaption}\item[{char}]{symbol}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_infinity_board_a39e37781147bfe29015b8d80f88e5103}\index{InfinityBoard@{InfinityBoard}!game\_is\_over@{game\_is\_over}}
+\index{game\_is\_over@{game\_is\_over}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{game\_is\_over()}{game\_is\_over()}}
+{\footnotesize\ttfamily \label{class_infinity_board_a39e37781147bfe29015b8d80f88e5103} 
+bool Infinity\+Board\+::game\+\_\+is\+\_\+over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if the game is over. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ae0e4575ec3cc4b6eb9f367ffb2beed13}{Board$<$ char $>$}}.
+
+\Hypertarget{class_infinity_board_aab6c22ff9b75cf12e07132b1f6f9b67e}\index{InfinityBoard@{InfinityBoard}!is\_draw@{is\_draw}}
+\index{is\_draw@{is\_draw}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{is\_draw()}{is\_draw()}}
+{\footnotesize\ttfamily \label{class_infinity_board_aab6c22ff9b75cf12e07132b1f6f9b67e} 
+bool Infinity\+Board\+::is\+\_\+draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Always false (game continues indefinitely). 
+
+
+
+Implements \mbox{\hyperlink{class_board_a8dbe2a243881986f3e53b45799d377fc}{Board$<$ char $>$}}.
+
+\Hypertarget{class_infinity_board_ae4660420b8fa9db56922b35dc9b6c100}\index{InfinityBoard@{InfinityBoard}!is\_lose@{is\_lose}}
+\index{is\_lose@{is\_lose}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{is\_lose()}{is\_lose()}}
+{\footnotesize\ttfamily \label{class_infinity_board_ae4660420b8fa9db56922b35dc9b6c100} 
+bool Infinity\+Board\+::is\+\_\+lose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if a player has lost. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a207d5f6feb77f81c51d1462f0245890d}{Board$<$ char $>$}}.
+
+\Hypertarget{class_infinity_board_ad2482747c6256e6ea8323dbaa38d57e2}\index{InfinityBoard@{InfinityBoard}!is\_win@{is\_win}}
+\index{is\_win@{is\_win}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{is\_win()}{is\_win()}}
+{\footnotesize\ttfamily \label{class_infinity_board_ad2482747c6256e6ea8323dbaa38d57e2} 
+bool Infinity\+Board\+::is\+\_\+win (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Check if player has 3 in a row. 
+
+
+
+Implements \mbox{\hyperlink{class_board_ab316fe3e79677b4617fc3d90d6c48f33}{Board$<$ char $>$}}.
+
+\Hypertarget{class_infinity_board_a98b31a46538a2d9dbf424c845c18710e}\index{InfinityBoard@{InfinityBoard}!remove\_oldest\_move@{remove\_oldest\_move}}
+\index{remove\_oldest\_move@{remove\_oldest\_move}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{remove\_oldest\_move()}{remove\_oldest\_move()}}
+{\footnotesize\ttfamily \label{class_infinity_board_a98b31a46538a2d9dbf424c845c18710e} 
+void Infinity\+Board\+::remove\+\_\+oldest\+\_\+move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_infinity_board_aa0816a7f3585c5751b8a8b45f553f5c7}\index{InfinityBoard@{InfinityBoard}!update\_board@{update\_board}}
+\index{update\_board@{update\_board}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{update\_board()}{update\_board()}}
+{\footnotesize\ttfamily \label{class_infinity_board_aa0816a7f3585c5751b8a8b45f553f5c7} 
+bool Infinity\+Board\+::update\+\_\+board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_move}{Move}}$<$ char $>$ \texorpdfstring{$\ast$}{*}}]{move}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Apply move and remove oldest if 3 moves have passed. 
+
+
+
+Implements \mbox{\hyperlink{class_board_a93d9dec601dda58b7e206ccb47633e57}{Board$<$ char $>$}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_infinity_board_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_infinity_board_a40b88a69bcbd22971779892addbf766e}\index{InfinityBoard@{InfinityBoard}!blank@{blank}}
+\index{blank@{blank}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{blank}{blank}}
+{\footnotesize\ttfamily \label{class_infinity_board_a40b88a69bcbd22971779892addbf766e} 
+char Infinity\+Board\+::blank = \textquotesingle{}.\textquotesingle{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_infinity_board_a3895095435ee420cbe1f74971ce68ee5}\index{InfinityBoard@{InfinityBoard}!move\_counter@{move\_counter}}
+\index{move\_counter@{move\_counter}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{move\_counter}{move\_counter}}
+{\footnotesize\ttfamily \label{class_infinity_board_a3895095435ee420cbe1f74971ce68ee5} 
+int Infinity\+Board\+::move\+\_\+counter\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_infinity_board_ab776e14cedd4e5f797489991eca0624d}\index{InfinityBoard@{InfinityBoard}!move\_history@{move\_history}}
+\index{move\_history@{move\_history}!InfinityBoard@{InfinityBoard}}
+\doxysubsubsection{\texorpdfstring{move\_history}{move\_history}}
+{\footnotesize\ttfamily \label{class_infinity_board_ab776e14cedd4e5f797489991eca0624d} 
+queue$<$pair$<$int, int$>$ $>$ Infinity\+Board\+::move\+\_\+history\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/xoooooo/inc/\mbox{\hyperlink{_infinity_tic_tac_toe_8h}{Infinity\+Tic\+Tac\+Toe.\+h}}\item 
+E\+:/xoooooo/src/\mbox{\hyperlink{_infinity_tic_tac_toe_8cpp}{Infinity\+Tic\+Tac\+Toe.\+cpp}}\end{DoxyCompactItemize}
